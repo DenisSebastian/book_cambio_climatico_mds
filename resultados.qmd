@@ -1,0 +1,8 @@
+---
+title: "Resultados"
+---
+
+## Requerimiento:
+
+
+**Resultados:** Esta sección contiene los resultados de los experimentos descrito en el diseño metodológico. Tienen que ayudar a responder la pregunta que se hicieron en la introducción.

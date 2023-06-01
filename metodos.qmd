@@ -1,0 +1,9 @@
+---
+title: "Métodos"
+---
+
+
+## Requerimiento:
+
+**Métodos:** Aquí se presenta el diseño metodológico del estudio. Este diseño es usado para
+responder la pregunta que definen en la introducción (e.g., ¿Cómo cambiará la variabilidad de El Niñoo de aquí a fin de siglo?). Cualquier salvedad (caveat) sobre la metodología tiene que ser descrita acá también.

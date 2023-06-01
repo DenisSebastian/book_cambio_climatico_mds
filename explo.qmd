@@ -1,0 +1,292 @@
+---
+title: "Análisis Exploratorio"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(scipen = 999)
+
+library(raster)
+library(dplyr)
+library(lubridate)
+library(ggplot2)
+```
+
+## Selección de Modelo
+
+Descripción inicial
+
+```{r}
+file_1 <- "data/historical/pr_SAM-44_MIROC-MIROC5_historical_r1i1p1_SMHI-RCA4_v3_day_19510101-19551231.nc"
+```
+
+## Lectura
+
+Librerías
+
+```{r eval=FALSE}
+library(raster)
+library(dplyr)
+library(lubridate)
+library(ggplot2)
+```
+
+```{r}
+r_pr_base  <- brick(file_1, varname = "pr")
+```
+
+```{r eval=FALSE}
+r_pr_base_test <- r_pr_base[[1]]
+
+# rastero to df (na omit)
+raster_df  <- raster::as.data.frame(r_pr_base_test, xy = TRUE) %>% na.omit()
+names(raster_df)[3] <-  "layer"
+
+map_raster_df <- ggplot() +
+  geom_tile(data = raster_df , 
+            aes(x = x, y = y, 
+                fill = layer)) + 
+  scale_fill_viridis_c(name = "Pr", option = "A", direction = 1)+
+  coord_equal()+
+  ggtitle(paste0("Precipitaciones Test") ) +
+  theme_bw() +
+  theme(panel.grid.major = element_line(colour = "gray99"), 
+        panel.grid.minor = element_line(colour = "gray99"))
+
+
+map_raster_df
+# ggsave(plot = map_raster_df,filename = "images/test_pr.png")
+
+```
+
+![](images/test_pr.png){fig-align="center" width="800"}
+
+## Definición de Región de Estudio (ROI)
+
+```{r}
+ext <- extent(c(162,  172 ,  -25,  -10 ))
+plot(r_pr_base[[1]])
+plot(ext, add = T)
+
+```
+
+```{r}
+r_pr <- crop(x = r_pr_base, y = ext, snap="out")
+```
+
+
+
+## Promedio Diario de la serie
+
+
+A continuación se genera vector con fechas en formato día año
+```{r}
+time_days <- names(r_pr) %>% gsub("X", "", .) %>% 
+  gsub("\\.", "-", .) %>% 
+  yday()
+time_days <- time_days[time_days!=366]
+
+head(time_days)
+tail(time_days)
+```
+
+
+Calculo de promedios por día anual
+
+
+```{r eval=FALSE}
+# calculate the average
+beginCluster(4)
+r_pr_mean <- clusterR(r_pr, stackApply, args = list(indices = time_days, fun = mean))
+
+r_pr_max <- clusterR(r_pr, stackApply, args = list(indices = time_days, fun = max))
+
+r_pr_sum <- clusterR(r_pr, stackApply, args = list(indices = time_days, fun = sum))
+endCluster()
+
+r_pr_mean
+nlayers(r_pr_mean)
+
+r_pr_mean <- dropLayer(r_pr_mean, 366)
+r_pr_max <- dropLayer(r_pr_max, 366)
+r_pr_sum <- dropLayer(r_pr_sum, 366)
+
+```
+
+
+```{r echo=FALSE}
+# saveRDS(r_pr_mean, "data/rds/h1_r_pr_mean.rds")
+# saveRDS(r_pr_max, "data/rds/h1_r_pr_max.rds")
+# saveRDS(r_pr_sum, "data/rds/h1_r_pr_sum.rds")
+r_pr_mean <- readRDS("data/rds/h1_r_pr_mean.rds")
+r_pr_max <- readRDS("data/rds/h1_r_pr_max.rds")
+r_pr_sum <- readRDS("data/rds/h1_r_pr_sum.rds")
+
+r_pr_mean
+
+nlayers(r_pr_mean)
+```
+
+
+## Serie de Tiempo Raw
+
+
+Cáculo de estadísticas generales por día año
+
+```{r}
+val_mean_daily <- cellStats(r_pr_mean, stat = "mean")
+
+val_max_daily <- cellStats(r_pr_max, stat = "max")
+
+val_sum_daily <- cellStats(r_pr_sum, stat = "sum")
+```
+
+
+
+```{r}
+# Crear setie de tiempo
+date_v = seq(as_date("1951-01-01"), as_date("1951-12-31"), "day")
+df_mean <- data.frame(date = date_v, pr = val_mean_daily)
+df_max <- data.frame(date = date_v, pr = val_max_daily)
+df_sum  <- data.frame(date = date_v, pr = val_sum_daily)
+
+```
+
+
+::: {.panel-tabset}
+
+
+## Mean
+```{r}
+
+ggplot(df_mean, 
+       aes(date, pr)) + 
+  geom_line(color = "#c6dbef") + 
+  scale_x_date(date_breaks = "month", date_labels = "%b") +
+  scale_y_continuous() +
+  labs(y = "mean precipitation", x = "", colour =  "") +
+  theme_minimal()
+```
+
+
+## Max
+
+```{r}
+
+ggplot(df_max, 
+       aes(date, pr)) + 
+  geom_line(color = "#c6dbef") + 
+  scale_x_date(date_breaks = "month", date_labels = "%b") +
+  scale_y_continuous() +
+  labs(y = "maximum precipitation", x = "", colour =  "") +
+  theme_minimal()
+```
+
+
+## Sum
+
+```{r}
+
+ggplot(df_sum, 
+       aes(date, pr)) + 
+  geom_line(color = "#c6dbef") + 
+  scale_x_date(date_breaks = "month", date_labels = "%b") +
+  scale_y_continuous() +
+  labs(y = "sum precipitation", x = "", colour =  "") +
+  theme_minimal()
+```
+
+:::
+
+
+## Smooth Serie
+
+
+Función de suavizado
+
+```{r}
+daily_smooth <- function(x, span = 0.5) {
+  if (all(is.na(x))) {
+    return(x)
+    
+  } else {
+    df <- data.frame(yd = 1:length(x), ta = x)
+    m <- loess(ta ~ yd, span = span, data = df)
+    est <- predict(m, 1:length(x))
+    
+    return(est)
+  }
+}
+```
+
+
+Aplicar función a al raster 
+```{r}
+r_mean_smooth <- calc(r_pr_mean, fun = daily_smooth)
+val_mean_daily <- cellStats(r_mean_smooth, stat = "mean")
+
+
+r_max_smooth <- calc(r_pr_max, fun = daily_smooth)
+val_max_daily <- cellStats(r_max_smooth, stat = "max")
+
+
+r_sum_smooth <- calc(r_pr_sum, fun = daily_smooth)
+val_sum_daily <- cellStats(r_sum_smooth, stat = "sum")
+
+
+```
+
+```{r}
+date_v = seq(as_date("1951-01-01"), as_date("1951-12-31"), "day")
+df_mean <- data.frame(date = date_v, pr = val_mean_daily)
+df_max <- data.frame(date = date_v, pr = val_max_daily)
+df_sum  <- data.frame(date = date_v, pr = val_sum_daily)
+```
+
+
+::: {.panel-tabset}
+
+
+## Mean
+```{r}
+
+ggplot(df_mean, 
+       aes(date, pr)) + 
+  geom_line(color = "#c6dbef") + 
+  scale_x_date(date_breaks = "month", date_labels = "%b") +
+  scale_y_continuous() +
+  labs(y = "mean precipitation", x = "", colour =  "") +
+  theme_minimal()
+```
+
+
+## Max
+
+```{r}
+
+ggplot(df_max, 
+       aes(date, pr)) + 
+  geom_line(color = "#c6dbef") + 
+  scale_x_date(date_breaks = "month", date_labels = "%b") +
+  scale_y_continuous() +
+  labs(y = "maximum precipitation", x = "", colour =  "") +
+  theme_minimal()
+```
+
+
+## Sum
+
+```{r}
+
+ggplot(df_sum, 
+       aes(date, pr)) + 
+  geom_line(color = "#c6dbef") + 
+  scale_x_date(date_breaks = "month", date_labels = "%b") +
+  scale_y_continuous() +
+  labs(y = "sum precipitation", x = "", colour =  "") +
+  theme_minimal()
+```
+
+:::

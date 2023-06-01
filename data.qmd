@@ -1,0 +1,7 @@
+---
+title: "Data"
+---
+
+## Requerimiento:
+
+**Data:** Presenta la fuente de datos a ser usados en el estudio y sus principales características. Guiarse por cómo esto es presentado tipícamente en publicaciones.

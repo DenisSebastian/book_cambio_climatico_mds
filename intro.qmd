@@ -1,0 +1,21 @@
+# Introducción
+
+Las olas de calor son importantes fenómenos climáticos extremos en los sistemas atmosféricos y oceánicos que pueden tener efectos devastadores y a largo plazo en los ecosistemas, con las consiguientes consecuencias socioeconómicas [@Oliver_2018].
+
+El problema de investigación consiste en determinar cómo cambiará la probabilidad de ocurrencia de períodos de sequía en la zona centro de Chile bajo el escenario de cambio climático proyectado para las próximas décadas. Se busca entender cómo las tendencias actuales en la variabilidad climática de la región pueden afectar la duración y frecuencia de los períodos de sequía, y cómo esto a su vez puede impactar en la disponibilidad de recursos hídricos y la sostenibilidad de la agricultura y otros sectores económicos dependientes del agua.
+
+
+Revisión de la literatura ..
+
+Motodología utilizada...
+
+
+
+
+## Requerimiento:
+
+i. Introduce la temática macro que va a ser abarcada por el reporte.
+ii. Define el problema a tratar. 
+iii. Hace un review de la literatura (qué sabemos y que no sobre el problema). 
+iv. Habla muy brevemente de la metodología usada para abordar el problema.
+v. Orienta al lector sobre el resto de la publicación.

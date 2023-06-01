@@ -1,0 +1,53 @@
+---
+title: "Funciones en Python"
+---
+
+Este capítulo esta destinado a definir y explicar las funciones en {{< var engine.python >}} utilizadas en el proyecto
+
+```{python}
+import numpy as np
+```
+
+
+
+##  Duration_Dry_Spell_wave
+
+Función para obtener la duración de las olas de periodos sin lluvia (Dry Spell)
+
+```{python}
+def Duration_Dry_Spell_wave(T,threshold):
+
+    I_on=np.argwhere(T>threshold)
+    I_off=np.argwhere(T<=threshold)
+
+    sigma=np.zeros(T.shape)
+
+    sigma[I_on]=1  ###1 if above threshold
+    sigma[I_off]=0
+
+    I=np.diff(sigma)  ###
+    ti_tem=np.squeeze(np.argwhere(np.abs(I-1)<0.1)+1)
+    tf=np.squeeze(np.argwhere(np.abs(I+1)<0.1)+1)
+
+    #ti=np.ndarray()
+
+    if T[0]>=threshold:
+        ti=np.zeros(ti_tem.size+1)
+        ti[0]=1
+        ti[1:]=ti_tem #[1:] gets last number
+    else:
+        ti=np.zeros(ti_tem.size)
+        ti=ti_tem
+
+    if ti.size>tf.size:
+        ti=ti[0:-1]
+
+    duration=tf-ti
+    mean_dur=np.mean(duration)
+    std_dur=np.std(duration)
+    tL=std_dur**2/mean_dur
+   
+    return duration, mean_dur, std_dur, tL
+
+```
+

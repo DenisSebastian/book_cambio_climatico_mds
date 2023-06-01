@@ -1,0 +1,32 @@
+version: 1
+
+email:
+  author: <denis.berroeta@uai.cl>
+
+author:
+  name: "[Denis Berroeta](https://cit.uai.cl/denis-berroeta/)"
+  cargo: "Coordinador de Investigación, Centro de Inteligencia Territorial - UAI"
+  email: <denis.berroeta@uai.cl>
+
+engine:
+  jupyter: "[Jupyter](https://jupyter.org)"
+  knitr: "[Knitr](<https://yihui.name/knitr>)"
+  R: "[R Project](https://www.r-project.org)"
+  python: "[Python](https://docs.python.org/es/3/tutorial/)"
+  
+software:
+  rstudio: "[RStudio](https://posit.co/products/open-source/rstudio/)"
+  
+library:
+  sf: "[Simple Features for R](https://r-spatial.github.io/sf/articles/sf1.html)"
+  dplyr: "[dplyr](https://dplyr.tidyverse.org)"
+  purrr: "[purrr](https://purrr.tidyverse.org)"
+  mapview: "[mapview](https://r-spatial.github.io/mapview/)"
+  lubridate: "[lubridate](https://lubridate.tidyverse.org)"
+  tidyr: "[tidyr](https://tidyr.tidyverse.org)"
+  plotly: "[plotly](https://plotly.com/r/)"
+  ggplot: "[ggplot2](https://ggplot2.tidyverse.org/)"
+  
+organization:
+  github: "[Github](https://github.com/)"
+  

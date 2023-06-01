@@ -1,0 +1,49 @@
+project:
+  type: book
+
+book:
+  title: "Proyecto Final"
+  subtitle: "Análisis de cambio de probabilidad de “Dry Spells” en la zona centro de Chile bajo cambio climático."
+  # affiliation-title: "Universidad Adolfo Ibáñez - Chile"
+  author: "Denis Berroeta (<denis.berroeta@uai.cl>)"
+  date: "2023-05-27"
+  #number-sections: 3
+  page-footer: 
+    left: "Copyright 2023, Denis Berroeta" 
+  chapters:
+    - index.qmd
+    - abstract.qmd
+    - intro.qmd
+    - data.qmd
+    - metodos.qmd
+    - resultados.qmd
+    - conclusion.qmd
+    - references.qmd
+        
+  appendices:
+    - explo.qmd
+    - conceptos.qmd
+    - fnc_R.qmd
+    - fnc_python.qmd
+    - requerimientos.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+    html-math-method: katex
+    css: styles/style.css
+    fig-align: "center"
+    fig-cap-location: "margin"
+    tab-cap-location: "left"
+    mailto: "<denis.berroeta@uai.cl>"
+  
+execute:
+  warning: false
+  
+editor: source
+always_allow_html: true
+
+
+

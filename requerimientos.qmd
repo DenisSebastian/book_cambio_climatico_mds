@@ -1,0 +1,32 @@
+# Requerimientos
+
+
+
+El informe consta de las siguientes partes:
+
+**a. Abstract (máximo 160 palabras, no cuentan para el máximo de 4000):** debe contener la
+definición e importancia del problema o pregunta de investigación, qué metodología se usó
+para responder la pregunta, los resultados más importantes y sus implicancias. Todo eso en un máximo de 160 palabras. Algunos ejemplos de abstracts escritos con menos de 160 palabras:
+https://www.nature.com/articles/s41467-018-03732-9.,
+https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018GL078465
+
+**b. Introducción:**  
+
+i. Introduce la temática macro que va a ser abarcada por el reporte.
+ii. Define el problema a tratar. 
+iii. Hace un review de la literatura (qué sabemos y que no sobre el problema). 
+iv. Habla muy brevemente de la metodología usada para abordar el problema.
+v. Orienta al lector sobre el resto de la publicación.
+
+**Importante empezar con el review de la literatura desde ya.**
+
+**c. Data:** Presenta la fuente de datos a ser usados en el estudio y sus principales características. Guiarse por cómo esto es presentado tipícamente en publicaciones.
+
+**d. Métodos:** Aquí se presenta el diseño metodológico del estudio. Este diseño es usado para
+responder la pregunta que definen en la introducción (e.g., ¿Cómo cambiará la variabilidad de El Niñoo de aquí a fin de siglo?). Cualquier salvedad (caveat) sobre la metodología tiene que ser descrita acá también.
+
+**e. Resultados:** Esta sección contiene los resultados de los experimentos descrito en el diseño metodológico. Tienen que ayudar a responder la pregunta que se hicieron en la introducción.
+
+**f. Conclusión:** Esta sección debe discutir cómo los resultados nos ayudan a responder la
+pregunta de investigación (que se hicieron en la introducción). También debe discutir las
+implicancias de los resultados (sociales, económicas, para el campo de investigación, etc).

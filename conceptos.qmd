@@ -1,0 +1,21 @@
+---
+title: "Definición de Conceptos"
+---
+
+
+
+## Dry Spell
+
+Un período de sequía, también conocido como "dry spell", es un período prolongado de tiempo en el que se registra una precipitación por debajo del promedio o incluso nula. Estos períodos pueden tener graves consecuencias en la disponibilidad de recursos hídricos, así como en la agricultura y otros sectores económicos que dependen del agua.
+
+Bajo condiciones de cambio climático, se espera que los períodos de sequía se vuelvan más frecuentes e intensos en muchas regiones del mundo, incluyendo la zona central de Chile. Esto se debe a que el cambio climático puede provocar una mayor variabilidad climática y una mayor incidencia de eventos climáticos extremos, como sequías prolongadas. Como resultado, es importante comprender cómo cambiará la probabilidad de ocurrencia de períodos de sequía en la región y cómo esto puede afectar la disponibilidad de recursos hídricos y la sostenibilidad de los sectores económicos dependientes del agua.
+
+
+## NetCDF
+
+NetCDF es un formato de archivo comúnmente utilizado para almacenar datos climáticos, ambientales y de bioinformática. Este formato permite que los datos multidimensionales se almacenen en un archivo compacto que se puede descargar fácilmente. Los datos se organizan en matrices y se pueden acceder mediante un índice. Además, los archivos NetCDF son compatibles con una amplia variedad de lenguajes de programación, lo que permite el procesamiento y análisis de datos personalizados. Algunas de las características principales de los archivos NetCDF son:
+
+- Los datos se pueden almacenar en diferentes tipos de datos (enteros, flotantes, etc.).
+- Los datos se pueden organizar en diferentes dimensiones (tiempo, latitud, longitud, profundidad, etc.).
+- Los datos se pueden comprimir para reducir el tamaño del archivo.
+- Los datos se pueden acceder y procesar en diferentes plataformas y lenguajes de programación.
