@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Proyecto Final - Appendix C — Funciones en Python</title>
+<title>Proyecto Final - Appendix D — Funciones en Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -134,7 +134,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Appendix C — Funciones en Python</h1>
+      <h1 class="quarto-secondary-nav-title">Appendix D — Funciones en Python</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -207,22 +207,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./conceptos.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Definición de Conceptos</span></a>
+  <a href="./explo.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Análisis Exploratorio</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./fnc_R.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Funciones en R</span></a>
+  <a href="./conceptos.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Definición de Conceptos</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./fnc_python.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Funciones en Python</span></a>
+  <a href="./fnc_R.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Funciones en R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./requerimientos.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Requerimientos</span></a>
+  <a href="./fnc_python.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Funciones en Python</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./requerimientos.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Requerimientos</span></a>
   </div>
 </li>
       </ul>
@@ -236,7 +241,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#duration_dry_spell_wave" id="toc-duration_dry_spell_wave" class="nav-link active" data-scroll-target="#duration_dry_spell_wave"><span class="toc-section-number">C.1</span>  Duration_Dry_Spell_wave</a></li>
+  <li><a href="#duration_dry_spell_wave" id="toc-duration_dry_spell_wave" class="nav-link active" data-scroll-target="#duration_dry_spell_wave"><span class="toc-section-number">D.1</span>  Duration_Dry_Spell_wave</a></li>
   </ul>
 </nav>
     </div>
@@ -245,7 +250,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Appendix C — Funciones en Python</h1>
+<h1 class="title d-none d-lg-block">Appendix D — Funciones en Python</h1>
 </div>
 
 
@@ -264,8 +269,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="duration_dry_spell_wave" class="level2" data-number="C.1">
-<h2 data-number="C.1" class="anchored" data-anchor-id="duration_dry_spell_wave"><span class="header-section-number">C.1</span> Duration_Dry_Spell_wave</h2>
+<section id="duration_dry_spell_wave" class="level2" data-number="D.1">
+<h2 data-number="D.1" class="anchored" data-anchor-id="duration_dry_spell_wave"><span class="header-section-number">D.1</span> Duration_Dry_Spell_wave</h2>
 <p>Función para obtener la duración de las olas de periodos sin lluvia (Dry Spell)</p>
 <div class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> Duration_Dry_Spell_wave(T,threshold):</span>
@@ -443,12 +448,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./fnc_R.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Funciones en R</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Funciones en R</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./requerimientos.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Requerimientos</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Requerimientos</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

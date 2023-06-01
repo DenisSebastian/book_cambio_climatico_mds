@@ -2,6 +2,16 @@
 title: "Data"
 ---
 
+
+Los datos de precipitación diaria producidos a través de modelos regionales, los que fueron obtenidos desde la página web del [Coordinated Regional Climate Downscaling Experiment](https://cordex.org/data-access/esgf/). Para ello, se realizó previamente una inspección de la disponibilidad de diferentes modelos de dominio sudamericano (desde _19°N_ a _52°S_ y desde _105°O_ _17°O_). El dominio sudamericano contempla 3 resoluciones espaciales horizontales; SAM-20 (0.20°x0.20°), SAM-22 (0.22°x0.22°) y SAM-44 (0.44°x0.44°).
+
+Debido a que el objetivo de este trabajo se enmarca en observar las tendencias de los *dry-spells* en los tres escenarios del cambio climático, se determinó trabajar con el dominio **SAM-44**, que es el único que considera los tres escenarios.  
+
+Para cumplir con los requisitos de frecuencia diaria de precipitación, el dominio SAM-44 y los tres escenarios RCP se encontraron 5 Driving Models; MIROC-MIROC5, ICHEC-EC-EARTH, MOHC-HadGEM2-ES (v3), MPI-M-MPI-ESM-LR (v1 y v3) y NCC-NorESM1-M.
+
+Consulta:
+: ¿usar las 2 versiones encontradas del MPI-M-MPI-ESM-LR (v1 y v3)?
+
 ## Requerimiento:
 
 **Data:** Presenta la fuente de datos a ser usados en el estudio y sus principales características. Guiarse por cómo esto es presentado tipícamente en publicaciones.
