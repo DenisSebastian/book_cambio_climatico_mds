@@ -78,11 +78,15 @@ r_pr_base  <- brick(file_1, varname = "pr")
 plot(r_pr_base[[1]])
 # ext <-  drawExtent()
 # ext
-ext <- extent(c(162,  172 ,  -25,  -10 ))
+ext <- extent(c(162,  172 ,  -29,  -38 ))
 
 r_pr <- crop(x = r_pr_base, y = ext, snap="out")
-plot(r_pr[[1]])
 
+plot(r_pr_base[[15]])
+plot(r_pr[[15]])
+plot(ext, add = T) 
+
+# *86,400
 
 # pr <- rast(r_pr, crs = 4326)
 
