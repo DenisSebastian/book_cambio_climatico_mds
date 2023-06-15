@@ -49,6 +49,20 @@
     "text": "2.1 Requerimiento:\n\nIntroduce la temática macro que va a ser abarcada por el reporte.\nDefine el problema a tratar.\nHace un review de la literatura (qué sabemos y que no sobre el problema).\nHabla muy brevemente de la metodología usada para abordar el problema.\nOrienta al lector sobre el resto de la publicación.\n\n\n\n\n\nOliver, Eric C. J., Markus G. Donat, Michael T. Burrows, Pippa J. Moore, Dan A. Smale, Lisa V. Alexander, Jessica A. Benthuysen, et al. 2018. “Longer and More Frequent Marine Heatwaves over the Past Century.” Nature Communications 9 (1). https://doi.org/10.1038/s41467-018-03732-9."
   },
   {
+    "objectID": "data.html#introducción",
+    "href": "data.html#introducción",
+    "title": "3  Data",
+    "section": "3.1 Introducción",
+    "text": "3.1 Introducción\nLos datos de precipitación diaria producidos a través de modelos regionales, los que fueron obtenidos desde la página web del Coordinated Regional Climate Downscaling Experiment. Para ello, se realizó previamente una inspección de la disponibilidad de diferentes modelos de dominio sudamericano (desde 19°N a 52°S y desde 105°O 17°O). El dominio sudamericano contempla 3 resoluciones espaciales horizontales; SAM-20 (0.20°x0.20°), SAM-22 (0.22°x0.22°) y SAM-44 (0.44°x0.44°).\nDebido a que el objetivo de este trabajo se enmarca en observar las tendencias de los dry-spells en los tres escenarios del cambio climático, se determinó trabajar con el dominio SAM-44, que es el único que considera los tres escenarios.\nPara cumplir con los requisitos de frecuencia diaria de precipitación, el dominio SAM-44 y los tres escenarios RCP se encontraron 5 Driving Models; MIROC-MIROC5, ICHEC-EC-EARTH, MOHC-HadGEM2-ES (v3), MPI-M-MPI-ESM-LR (v1 y v3) y NCC-NorESM1-M."
+  },
+  {
+    "objectID": "data.html#miroc-miroc5-historical",
+    "href": "data.html#miroc-miroc5-historical",
+    "title": "3  Data",
+    "section": "3.2 MIROC-MIROC5 Historical",
+    "text": "3.2 MIROC-MIROC5 Historical\n\n\n\n\n3.2.1 Promedio de Precipitaciones Diarias\nPromedio de Precipitaciones diarias de MIROC5 Historical (1951-01-01 - 2005-12-31)\n\n\n\n\n\n\n\n\n3.2.2 Promedio de Precipitaciones agrupadas por mes\n\n\n\nPromedio de Precipitaciones diarias de MIROC5 Historical (1951-01 - 2005-12)"
+  },
+  {
     "objectID": "data.html#requerimiento",
     "href": "data.html#requerimiento",
     "title": "3  Data",
@@ -151,7 +165,7 @@
     "href": "fnc_python.html#duration_dry_spell_wave",
     "title": "Appendix D — Funciones en Python",
     "section": "D.1 Duration_Dry_Spell_wave",
-    "text": "D.1 Duration_Dry_Spell_wave\nFunción para obtener la duración de las olas de periodos sin lluvia (Dry Spell)\n\ndef Duration_Dry_Spell_wave(T,threshold):\n\n    I_on=np.argwhere(T>threshold)\n    I_off=np.argwhere(T<=threshold)\n\n    sigma=np.zeros(T.shape)\n\n    sigma[I_on]=1  ###1 if above threshold\n    sigma[I_off]=0\n\n    I=np.diff(sigma)  ###\n    ti_tem=np.squeeze(np.argwhere(np.abs(I-1)<0.1)+1)\n    tf=np.squeeze(np.argwhere(np.abs(I+1)<0.1)+1)\n\n    #ti=np.ndarray()\n\n    if T[0]>=threshold:\n        ti=np.zeros(ti_tem.size+1)\n        ti[0]=1\n        ti[1:]=ti_tem #[1:] gets last number\n    else:\n        ti=np.zeros(ti_tem.size)\n        ti=ti_tem\n\n    if ti.size>tf.size:\n        ti=ti[0:-1]\n\n    duration=tf-ti\n    mean_dur=np.mean(duration)\n    std_dur=np.std(duration)\n    tL=std_dur**2/mean_dur\n   \n    return duration, mean_dur, std_dur, tL"
+    "text": "D.1 Duration_Dry_Spell_wave\nFunción para obtener la duración de las olas de periodos sin lluvia (Dry Spell)\n\ndef Duration_Dry_Spell_wave(T,threshold):\n\n    I_on=np.argwhere(T&gt;threshold)\n    I_off=np.argwhere(T&lt;=threshold)\n\n    sigma=np.zeros(T.shape)\n\n    sigma[I_on]=1  ###1 if above threshold\n    sigma[I_off]=0\n\n    I=np.diff(sigma)  ###\n    ti_tem=np.squeeze(np.argwhere(np.abs(I-1)&lt;0.1)+1)\n    tf=np.squeeze(np.argwhere(np.abs(I+1)&lt;0.1)+1)\n\n    #ti=np.ndarray()\n\n    if T[0]&gt;=threshold:\n        ti=np.zeros(ti_tem.size+1)\n        ti[0]=1\n        ti[1:]=ti_tem #[1:] gets last number\n    else:\n        ti=np.zeros(ti_tem.size)\n        ti=ti_tem\n\n    if ti.size&gt;tf.size:\n        ti=ti[0:-1]\n\n    duration=tf-ti\n    mean_dur=np.mean(duration)\n    std_dur=np.std(duration)\n    tL=std_dur**2/mean_dur\n   \n    return duration, mean_dur, std_dur, tL"
   },
   {
     "objectID": "requerimientos.html",
@@ -159,19 +173,5 @@
     "title": "Appendix E — Requerimientos",
     "section": "",
     "text": "El informe consta de las siguientes partes:\na. Abstract (máximo 160 palabras, no cuentan para el máximo de 4000): debe contener la definición e importancia del problema o pregunta de investigación, qué metodología se usó para responder la pregunta, los resultados más importantes y sus implicancias. Todo eso en un máximo de 160 palabras. Algunos ejemplos de abstracts escritos con menos de 160 palabras: https://www.nature.com/articles/s41467-018-03732-9., https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018GL078465\nb. Introducción:\n\nIntroduce la temática macro que va a ser abarcada por el reporte.\nDefine el problema a tratar.\nHace un review de la literatura (qué sabemos y que no sobre el problema).\nHabla muy brevemente de la metodología usada para abordar el problema.\nOrienta al lector sobre el resto de la publicación.\n\nImportante empezar con el review de la literatura desde ya.\nc. Data: Presenta la fuente de datos a ser usados en el estudio y sus principales características. Guiarse por cómo esto es presentado tipícamente en publicaciones.\nd. Métodos: Aquí se presenta el diseño metodológico del estudio. Este diseño es usado para responder la pregunta que definen en la introducción (e.g., ¿Cómo cambiará la variabilidad de El Niñoo de aquí a fin de siglo?). Cualquier salvedad (caveat) sobre la metodología tiene que ser descrita acá también.\ne. Resultados: Esta sección contiene los resultados de los experimentos descrito en el diseño metodológico. Tienen que ayudar a responder la pregunta que se hicieron en la introducción.\nf. Conclusión: Esta sección debe discutir cómo los resultados nos ayudan a responder la pregunta de investigación (que se hicieron en la introducción). También debe discutir las implicancias de los resultados (sociales, económicas, para el campo de investigación, etc)."
-  },
-  {
-    "objectID": "data.html#introducción",
-    "href": "data.html#introducción",
-    "title": "3  Data",
-    "section": "3.1 Introducción",
-    "text": "3.1 Introducción\nLos datos de precipitación diaria producidos a través de modelos regionales, los que fueron obtenidos desde la página web del Coordinated Regional Climate Downscaling Experiment. Para ello, se realizó previamente una inspección de la disponibilidad de diferentes modelos de dominio sudamericano (desde 19°N a 52°S y desde 105°O 17°O). El dominio sudamericano contempla 3 resoluciones espaciales horizontales; SAM-20 (0.20°x0.20°), SAM-22 (0.22°x0.22°) y SAM-44 (0.44°x0.44°).\nDebido a que el objetivo de este trabajo se enmarca en observar las tendencias de los dry-spells en los tres escenarios del cambio climático, se determinó trabajar con el dominio SAM-44, que es el único que considera los tres escenarios.\nPara cumplir con los requisitos de frecuencia diaria de precipitación, el dominio SAM-44 y los tres escenarios RCP se encontraron 5 Driving Models; MIROC-MIROC5, ICHEC-EC-EARTH, MOHC-HadGEM2-ES (v3), MPI-M-MPI-ESM-LR (v1 y v3) y NCC-NorESM1-M."
-  },
-  {
-    "objectID": "data.html#miroc-miroc5-historical",
-    "href": "data.html#miroc-miroc5-historical",
-    "title": "3  Data",
-    "section": "3.2 MIROC-MIROC5 Historical",
-    "text": "3.2 MIROC-MIROC5 Historical\n\n\n\n\n3.2.1 Promedio de Precipitaciones Diarias\nPromedio de Precipitaciones diarias de MIROC5 Historical (1951-01-01 - 2005-12-31)\n\n\n\n\n\n\n\n\n3.2.2 Promedio de Precipitaciones agrupadas por mes\n\n\n\nPromedio de Precipitaciones diarias de MIROC5 Historical (1951-01 - 2005-12)"
   }
 ]

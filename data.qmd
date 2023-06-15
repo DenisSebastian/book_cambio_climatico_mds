@@ -1,5 +1,7 @@
 ---
 title: "Data"
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -39,12 +41,25 @@ subt = paste0("MIROC5 Historical (", min(df_mean$date), " - ", max(df_mean$date)
 Promedio de Precipitaciones diarias de _`r subt`_
 
 ```{r}
+hline <- function(y = 0, color = "red") {
+  list(
+    type = "line",
+    x0 = 0,
+    x1 = 1,
+    xref = "paper",
+    y0 = y,
+    y1 = y,
+    line = list(color = color, dash="dot")
+  )
+}
+
 
 
 fig_m <- plot_ly(df_mean,type = 'scatter', mode = 'lines' )%>%
   add_trace(x = ~date, y = ~pr, name = "Latam",
             line = list(color = "#69b3a2"), opacity=0.7)%>%
   layout(
+    shapes = list(hline(0.5)), 
     title = 'Precipitaciones Diarias',
     showlegend = F,
     legend = list(title = list(text = 'Pr')),
@@ -111,6 +126,18 @@ Promedio de Precipitaciones diarias de _`r subt`_
 
 ```{r}
 
+hline <- function(y = 0, color = "red") {
+  list(
+    type = "line",
+    x0 = 0,
+    x1 = 1,
+    xref = "paper",
+    y0 = y,
+    y1 = y,
+    line = list(color = color, dash="dot")
+  )
+}
+
 
 
 fig <- plot_ly(datos_mensuales, type = 'scatter', mode = 'lines') %>%
@@ -122,6 +149,7 @@ fig <- plot_ly(datos_mensuales, type = 'scatter', mode = 'lines') %>%
     opacity = 0.7
   ) %>%
   layout(
+    shapes = list(hline(2)), 
     title = 'Precipitaciones Mensuales',
     showlegend = F,
     legend = list(title = list(text = 'Pr')),
