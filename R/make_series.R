@@ -156,7 +156,7 @@ fig
 median_pr <- app(x = nc_all, fun = Duration_Dry_Spell_wave,
                   cores=4)
 
-Duration_Dry_Spell_wave <- function(pr, threshold =1) {
+Duration_Dry_Spell_wave <- function(pr, threshold = 1) {
   I_on <- which(pr > threshold)
   I_off <- which(pr <= threshold)
   
@@ -186,15 +186,13 @@ Duration_Dry_Spell_wave <- function(pr, threshold =1) {
   std_dur <- sd(duration)
   tL <- std_dur ^ 2 / mean_dur
   
-  return(duration)
   
-return(list(
-  duration = duration,
-  mean_dur = mean_dur,
-  std_dur = std_dur,
-  tL = tL
-)
-)
+  return(list(
+    duration = duration,
+    mean_dur = mean_dur,
+    std_dur = std_dur,
+    tL = tL
+  ))
 }
 
 

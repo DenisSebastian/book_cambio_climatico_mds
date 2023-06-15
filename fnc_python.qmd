@@ -15,12 +15,12 @@ import numpy as np
 Función para obtener la duración de las olas de periodos sin lluvia (Dry Spell)
 
 ```{python}
-def Duration_Dry_Spell_wave(T,threshold):
+def Duration_Dry_Spell_wave(Pr,threshold):
 
-    I_on=np.argwhere(T>threshold)
-    I_off=np.argwhere(T<=threshold)
+    I_on=np.argwhere(Pr>threshold)
+    I_off=np.argwhere(Pr<=threshold)
 
-    sigma=np.zeros(T.shape)
+    sigma=np.zeros(Pr.shape)
 
     sigma[I_on]=1  ###1 if above threshold
     sigma[I_off]=0
@@ -49,5 +49,63 @@ def Duration_Dry_Spell_wave(T,threshold):
    
     return duration, mean_dur, std_dur, tL
 
+```
+
+## Duration_dry
+
+Función para obtener la duración de las olas de periodos sin lluvia (Dry Spell) con percentiles
+
+
+```{python}
+def Duration_dry(prec,threshold): 
+
+    I_wet=np.argwhere(prec>threshold)
+    I_dry=np.argwhere(prec<=threshold)
+
+    sigma=np.zeros(prec.shape) 
+
+    sigma[I_wet]=1  ###1 if it rains that day, 0 if not
+    sigma[I_dry]=0
+
+    I=np.diff(sigma)  ###
+    ti_tem=np.squeeze(np.argwhere(np.abs(I+1)<0.1)+1)
+    tf=np.squeeze(np.argwhere(np.abs(I-1)<0.1)+1)
+    
+    if ti_tem.size<10:
+        duration=float('nan')
+        ti=float('nan')
+        tf=float('nan')
+        n=float('nan')
+        mean_dur=float('nan')
+        tL=float('nan')
+        t99=float('nan')
+        t999=float('nan')
+
+    #ti=np.ndarray()
+
+    else:
+        if prec[0]>threshold:
+            ti=np.zeros(len(ti_tem))
+            ti=ti_tem
+        else:
+            ti=np.zeros(len(ti_tem)+1)
+            ti[0]=1
+            ti[1:]=ti_tem #[1:] gets last number
+
+        if len(ti)>len(tf):
+            ti=ti[0:-1]
+
+        duration=tf-ti
+        n=len(duration)
+
+        ti=ti.astype(int)
+        tf=tf.astype(int)
+
+        mean_dur=np.mean(duration)
+        tL=np.var(duration)/np.mean(duration)
+        t99=np.percentile(duration,99)
+        t999=np.percentile(duration,99.9)
+    
+    return duration, ti, tf, n, mean_dur, tL, t99, t999
 ```
 
