@@ -56,25 +56,46 @@
     "text": "3.1 Introducción\nLos datos de precipitación diaria producidos a través de modelos regionales, los que fueron obtenidos desde la página web del Coordinated Regional Climate Downscaling Experiment. Para ello, se realizó previamente una inspección de la disponibilidad de diferentes modelos de dominio sudamericano (desde 19°N a 52°S y desde 105°O 17°O). El dominio sudamericano contempla 3 resoluciones espaciales horizontales; SAM-20 (0.20°x0.20°), SAM-22 (0.22°x0.22°) y SAM-44 (0.44°x0.44°).\nDebido a que el objetivo de este trabajo se enmarca en observar las tendencias de los dry-spells en los tres escenarios del cambio climático, se determinó trabajar con el dominio SAM-44, que es el único que considera los tres escenarios.\nPara cumplir con los requisitos de frecuencia diaria de precipitación, el dominio SAM-44 y los tres escenarios RCP se encontraron 5 Driving Models; MIROC-MIROC5, ICHEC-EC-EARTH, MOHC-HadGEM2-ES (v3), MPI-M-MPI-ESM-LR (v1 y v3) y NCC-NorESM1-M."
   },
   {
+    "objectID": "data.html#región-de-interés",
+    "href": "data.html#región-de-interés",
+    "title": "3  Data",
+    "section": "3.2 Región de Interés",
+    "text": "3.2 Región de Interés\nSe realizó un filtro espacial para establecer una región de interés (ROI) que abarca la de región de Coquimbo a la región de los Lagos\n\n\n\n\n\n\n\n(a) Región Total\n\n\n\n\n\n\n\n(b) Región de Interés\n\n\n\n\nFigure 3.1: Territorio total que representan las precipitaciones y región de interés."
+  },
+  {
     "objectID": "data.html#miroc-miroc5-historical",
     "href": "data.html#miroc-miroc5-historical",
     "title": "3  Data",
-    "section": "3.2 MIROC-MIROC5 Historical",
-    "text": "3.2 MIROC-MIROC5 Historical\n\n\n\n\n3.2.1 Promedio de Precipitaciones Diarias\nPromedio de Precipitaciones diarias de MIROC5 Historical (1951-01-01 - 2005-12-31)\n\n\n\n\n\n\n\n\n3.2.2 Promedio de Precipitaciones agrupadas por mes\n\n\n\nPromedio de Precipitaciones diarias de MIROC5 Historical (1951-01 - 2005-12)"
+    "section": "3.3 MIROC-MIROC5 Historical",
+    "text": "3.3 MIROC-MIROC5 Historical\n\n3.3.1 Promedio de Precipitaciones Diarias\nPromedio de Precipitaciones diarias de MIROC5 Historical (1951-01-01 - 2005-12-31)\n\n\n\n\n\n\n\n\n3.3.2 Promedio de Precipitaciones agrupadas por mes\nPromedio de Precipitaciones diarias de MIROC5 Historical (1951-01 - 2005-12)"
   },
   {
     "objectID": "data.html#requerimiento",
     "href": "data.html#requerimiento",
     "title": "3  Data",
-    "section": "3.3 Requerimiento:",
-    "text": "3.3 Requerimiento:\nData: Presenta la fuente de datos a ser usados en el estudio y sus principales características. Guiarse por cómo esto es presentado tipícamente en publicaciones."
+    "section": "3.4 Requerimiento:",
+    "text": "3.4 Requerimiento:\nData: Presenta la fuente de datos a ser usados en el estudio y sus principales características. Guiarse por cómo esto es presentado tipícamente en publicaciones."
+  },
+  {
+    "objectID": "metodos.html#instroducción",
+    "href": "metodos.html#instroducción",
+    "title": "4  Métodos",
+    "section": "4.1 Instroducción",
+    "text": "4.1 Instroducción"
+  },
+  {
+    "objectID": "metodos.html#miroc-miroc5-historical",
+    "href": "metodos.html#miroc-miroc5-historical",
+    "title": "4  Métodos",
+    "section": "4.2 MIROC-MIROC5 Historical",
+    "text": "4.2 MIROC-MIROC5 Historical\n\n4.2.1 Número de Perdiodos de Dry Spell\n\n\n\nFigure 4.1: Número de Perdiodos de Dry Spell\n\n\n\n\n4.2.2 Promedio de Duración de Dry Spell\n\n\n\nFigure 4.2: Promedio de Duración de Dry Spel\n\n\n\n\n4.2.3 Coeficiente de Variabilidad\n\n\n\nFigure 4.3: oeficiente de Variabilidad\n\n\n\n\n4.2.4 Percentiles de Dry Spell\n\n\n\n\n\n\n\n(a) Percentil 99\n\n\n\n\n\n\n\n(b) Percentil 99.9\n\n\n\n\nFigure 4.4: Representación espacial de los los percentiles de dry spell"
   },
   {
     "objectID": "metodos.html#requerimiento",
     "href": "metodos.html#requerimiento",
     "title": "4  Métodos",
-    "section": "4.1 Requerimiento:",
-    "text": "4.1 Requerimiento:\nMétodos: Aquí se presenta el diseño metodológico del estudio. Este diseño es usado para responder la pregunta que definen en la introducción (e.g., ¿Cómo cambiará la variabilidad de El Niñoo de aquí a fin de siglo?). Cualquier salvedad (caveat) sobre la metodología tiene que ser descrita acá también."
+    "section": "4.3 Requerimiento:",
+    "text": "4.3 Requerimiento:\nMétodos: Aquí se presenta el diseño metodológico del estudio. Este diseño es usado para responder la pregunta que definen en la introducción (e.g., ¿Cómo cambiará la variabilidad de El Niñoo de aquí a fin de siglo?). Cualquier salvedad (caveat) sobre la metodología tiene que ser descrita acá también."
   },
   {
     "objectID": "resultados.html#requerimiento",
