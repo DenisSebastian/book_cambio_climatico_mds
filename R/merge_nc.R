@@ -17,8 +17,10 @@ library(purrr)
 
 # Lectura de Insumos ------------------------------------------------------
 
+
+
+# lectura única para pruebas
 file_1 <- "data/historical/pr_SAM-44_MIROC-MIROC5_historical_r1i1p1_SMHI-RCA4_v3_day_19510101-19551231.nc"
-# lectura única
 r_pr_base1  <- rast(file_1)
 plot(r_pr_base1[[1]])
 
@@ -70,10 +72,10 @@ terra::writeRaster(nc_all, "data/tif/MIROC5_historical.tif", overwrite = T)
 
 # https://user-images.githubusercontent.com/12826141/36675223-b2df687a-1b08-11e8-812f-5fa187f68030.png
 # ext <- ext(c(162,  172 , -38,   -29 ))
-nc_file <-  list.files("data/historical/", pattern = "*nc$", full.names = T)[1]
-crs_target <- get_crs_rot(nc_file)
-reproject_custom(rast_terra =nc_all, crs_target = crs_target)
-terra::crop(x = nc_all, y = ext, snap="out")
+# nc_file <-  list.files("data/historical/", pattern = "*nc$", full.names = T)[1]
+# crs_target <- get_crs_rot(nc_file)
+# reproject_custom(rast_terra =nc_all, crs_target = crs_target)
+# terra::crop(x = nc_all, y = ext, snap="out")
 #  # https://github.com/dquesadacr/CORDEX
 
 

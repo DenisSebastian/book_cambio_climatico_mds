@@ -1,5 +1,6 @@
 ---
 title: "Data"
+fig-cap-location: "bottom"
 editor_options: 
   chunk_output_type: console
 ---
@@ -23,9 +24,21 @@ Debido a que el objetivo de este trabajo se enmarca en observar las tendencias d
 
 Para cumplir con los requisitos de frecuencia diaria de precipitación, el dominio SAM-44 y los tres escenarios RCP se encontraron 5 Driving Models; MIROC-MIROC5, ICHEC-EC-EARTH, MOHC-HadGEM2-ES (v3), MPI-M-MPI-ESM-LR (v1 y v3) y NCC-NorESM1-M.
 
+## Región de Interés
 
+Se realizó un filtro espacial para establecer una región de interés (ROI) que abarca la de región de Coquimbo a la región de los Lagos
+
+::: {#fig-roi layout-ncol=2}
+
+![Región Total](images/test_pr.png){#fig-product}
+
+![Región de Interés](images/test_pr_roi.png){#fig-roi}
+
+Territorio total que representan las precipitaciones y región de interés.
+:::
 
 ## MIROC-MIROC5 Historical
+
 
 ```{r}
 df_mean <-  readRDS("data/rds/dayly_mean_MIROC5.rds")

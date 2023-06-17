@@ -1,9 +1,34 @@
 ---
 title: "Métodos"
+fig-cap-location: "bottom"
 ---
 
+## Instroducción
+
+## MIROC-MIROC5 Historical
+
+### Número de Perdiodos de Dry Spell
+
+![Número de Perdiodos de Dry Spell](images/MIROC5_hist_N_periods.png){#fig-periMIROC5 width="300"}
+
+### Promedio de Duración de Dry Spell
+
+![Promedio de Duración de Dry Spel](images/MIROC5_hist_prom_dur.png){#fig-meanMIROC5  width="300"}
+
+### Coeficiente de Variabilidad
+
+![oeficiente de Variabilidad](images/MIROC5_hist_c_var.png){#fig-cvMIROC5  width="300"}
+
+### Percentiles de Dry Spell
+
+::: {#fig-percentiles layout-ncol="2"}
+![Percentil 99](images/MIROC5_hist_p99.png){#fig-p99MIROC5}
+
+![Percentil 99.9](images/MIROC5_hist_p999.png){#fig-p999MIROC5}
+
+Representación espacial de los los percentiles de dry spell
+:::
 
 ## Requerimiento:
 
-**Métodos:** Aquí se presenta el diseño metodológico del estudio. Este diseño es usado para
-responder la pregunta que definen en la introducción (e.g., ¿Cómo cambiará la variabilidad de El Niñoo de aquí a fin de siglo?). Cualquier salvedad (caveat) sobre la metodología tiene que ser descrita acá también.
+**Métodos:** Aquí se presenta el diseño metodológico del estudio. Este diseño es usado para responder la pregunta que definen en la introducción (e.g., ¿Cómo cambiará la variabilidad de El Niñoo de aquí a fin de siglo?). Cualquier salvedad (caveat) sobre la metodología tiene que ser descrita acá también.

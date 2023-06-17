@@ -234,6 +234,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#duration_dry_spell_wave" id="toc-duration_dry_spell_wave" class="nav-link active" data-scroll-target="#duration_dry_spell_wave"><span class="header-section-number">D.1</span> Duration_Dry_Spell_wave</a></li>
+  <li><a href="#duration_dry" id="toc-duration_dry" class="nav-link" data-scroll-target="#duration_dry"><span class="header-section-number">D.2</span> Duration_dry</a></li>
   </ul>
 </nav>
     </div>
@@ -265,12 +266,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="D.1" class="anchored" data-anchor-id="duration_dry_spell_wave"><span class="header-section-number">D.1</span> Duration_Dry_Spell_wave</h2>
 <p>Función para obtener la duración de las olas de periodos sin lluvia (Dry Spell)</p>
 <div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> Duration_Dry_Spell_wave(T,threshold):</span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> Duration_Dry_Spell_wave(Pr,threshold):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    I_on<span class="op">=</span>np.argwhere(T<span class="op">&gt;</span>threshold)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    I_off<span class="op">=</span>np.argwhere(T<span class="op">&lt;=</span>threshold)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    I_on<span class="op">=</span>np.argwhere(Pr<span class="op">&gt;</span>threshold)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    I_off<span class="op">=</span>np.argwhere(Pr<span class="op">&lt;=</span>threshold)</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    sigma<span class="op">=</span>np.zeros(T.shape)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    sigma<span class="op">=</span>np.zeros(Pr.shape)</span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    sigma[I_on]<span class="op">=</span><span class="dv">1</span>  <span class="co">###1 if above threshold</span></span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    sigma[I_off]<span class="op">=</span><span class="dv">0</span></span>
@@ -298,6 +299,62 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    tL<span class="op">=</span>std_dur<span class="op">**</span><span class="dv">2</span><span class="op">/</span>mean_dur</span>
 <span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>   </span>
 <span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> duration, mean_dur, std_dur, tL</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="duration_dry" class="level2" data-number="D.2">
+<h2 data-number="D.2" class="anchored" data-anchor-id="duration_dry"><span class="header-section-number">D.2</span> Duration_dry</h2>
+<p>Función para obtener la duración de las olas de periodos sin lluvia (Dry Spell) con percentiles</p>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> Duration_dry(prec,threshold): </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    I_wet<span class="op">=</span>np.argwhere(prec<span class="op">&gt;</span>threshold)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    I_dry<span class="op">=</span>np.argwhere(prec<span class="op">&lt;=</span>threshold)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    sigma<span class="op">=</span>np.zeros(prec.shape) </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    sigma[I_wet]<span class="op">=</span><span class="dv">1</span>  <span class="co">###1 if it rains that day, 0 if not</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    sigma[I_dry]<span class="op">=</span><span class="dv">0</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    I<span class="op">=</span>np.diff(sigma)  <span class="co">###</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    ti_tem<span class="op">=</span>np.squeeze(np.argwhere(np.<span class="bu">abs</span>(I<span class="op">+</span><span class="dv">1</span>)<span class="op">&lt;</span><span class="fl">0.1</span>)<span class="op">+</span><span class="dv">1</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    tf<span class="op">=</span>np.squeeze(np.argwhere(np.<span class="bu">abs</span>(I<span class="op">-</span><span class="dv">1</span>)<span class="op">&lt;</span><span class="fl">0.1</span>)<span class="op">+</span><span class="dv">1</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> ti_tem.size<span class="op">&lt;</span><span class="dv">10</span>:</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>        duration<span class="op">=</span><span class="bu">float</span>(<span class="st">'nan'</span>)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>        ti<span class="op">=</span><span class="bu">float</span>(<span class="st">'nan'</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>        tf<span class="op">=</span><span class="bu">float</span>(<span class="st">'nan'</span>)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>        n<span class="op">=</span><span class="bu">float</span>(<span class="st">'nan'</span>)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>        mean_dur<span class="op">=</span><span class="bu">float</span>(<span class="st">'nan'</span>)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>        tL<span class="op">=</span><span class="bu">float</span>(<span class="st">'nan'</span>)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>        t99<span class="op">=</span><span class="bu">float</span>(<span class="st">'nan'</span>)</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>        t999<span class="op">=</span><span class="bu">float</span>(<span class="st">'nan'</span>)</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    <span class="co">#ti=np.ndarray()</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> prec[<span class="dv">0</span>]<span class="op">&gt;</span>threshold:</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>            ti<span class="op">=</span>np.zeros(<span class="bu">len</span>(ti_tem))</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>            ti<span class="op">=</span>ti_tem</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>            ti<span class="op">=</span>np.zeros(<span class="bu">len</span>(ti_tem)<span class="op">+</span><span class="dv">1</span>)</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>            ti[<span class="dv">0</span>]<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>            ti[<span class="dv">1</span>:]<span class="op">=</span>ti_tem <span class="co">#[1:] gets last number</span></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">len</span>(ti)<span class="op">&gt;</span><span class="bu">len</span>(tf):</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>            ti<span class="op">=</span>ti[<span class="dv">0</span>:<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>        duration<span class="op">=</span>tf<span class="op">-</span>ti</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>        n<span class="op">=</span><span class="bu">len</span>(duration)</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>        ti<span class="op">=</span>ti.astype(<span class="bu">int</span>)</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>        tf<span class="op">=</span>tf.astype(<span class="bu">int</span>)</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>        mean_dur<span class="op">=</span>np.mean(duration)</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>        tL<span class="op">=</span>np.var(duration)<span class="op">/</span>np.mean(duration)</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>        t99<span class="op">=</span>np.percentile(duration,<span class="dv">99</span>)</span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>        t999<span class="op">=</span>np.percentile(duration,<span class="fl">99.9</span>)</span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> duration, ti, tf, n, mean_dur, tL, t99, t999</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
