@@ -7,21 +7,24 @@ fig-cap-location: "bottom"
 
 ## MIROC-MIROC5 Historical
 
-### Número de Perdiodos de Dry Spell
+**Número de Perdiodos, Promedio de Duración y Coeficiente de Variabilidad de Dry Spell**
+
+::: {#fig-percentiles layout-ncol="3"}
 
 ![Número de Perdiodos de Dry Spell](images/MIROC5_hist_N_periods.png){#fig-periMIROC5 width="300"}
 
-### Promedio de Duración de Dry Spell
-
 ![Promedio de Duración de Dry Spel](images/MIROC5_hist_prom_dur.png){#fig-meanMIROC5  width="300"}
 
-### Coeficiente de Variabilidad
+![Coeficiente de Variabilidad](images/MIROC5_hist_c_var.png){#fig-cvMIROC5  width="300"}
 
-![oeficiente de Variabilidad](images/MIROC5_hist_c_var.png){#fig-cvMIROC5  width="300"}
+Número de Perdiodos, Promedio de Duración y Coeficiente de Variabilidad de Dry Spell
+:::
 
-### Percentiles de Dry Spell
 
-::: {#fig-percentiles layout-ncol="2"}
+
+**Percentiles de Dry Spell**
+
+::: {#fig-percentiles layout-ncol="2" }
 ![Percentil 99](images/MIROC5_hist_p99.png){#fig-p99MIROC5}
 
 ![Percentil 99.9](images/MIROC5_hist_p999.png){#fig-p999MIROC5}
