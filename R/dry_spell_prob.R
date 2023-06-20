@@ -10,11 +10,6 @@ options(scipen = 999)
 
 # insumos -----------------------------------------------------------------
 nc_all <-  rast("data/tif/MIROC5_historical.tif")
-# matriz_sequia <- as.matrix(nc_all)
-# densidades_pixeles <- apply(matriz_sequia, 2, function(col) density(col)$y)
-# 
-# densidad_consolidada <- apply(densidades_pixeles, 2, function(col) density(col)$y)
-# densidad_consolidada_promedio <- rowMeans(densidades_pixeles)
 
 
 # get series --------------------------------------------------------------

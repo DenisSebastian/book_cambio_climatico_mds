@@ -33,6 +33,13 @@ Representación espacial de los los percentiles de dry spell
 :::
 
 
+**Análisis de la función de Densidad**
+
+A continaución se observa  graficamente (@fig-fdens) la función de desidad de la duración de un pixel en este caso el número 100, donde ademas se le calcula el promedio.
+
+![Función de Densidad de duración de Dry Espell sobre el pixel 100](images/fun_densidad_p100.png){#fig-fdens  fig-aling="center" width="600"}
+
+Posteriormente a cada dunción de densidad se le calculo diversas medidas estadísticas, cuyo resultads se pueden interpretar espacialmente a través de las siguientes figuras @fig-estadDrySpell.
 
 ::: {#fig-estadDrySpell layout-ncol="3"}
 
