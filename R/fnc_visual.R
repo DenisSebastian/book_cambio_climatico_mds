@@ -34,8 +34,8 @@ map_raster <- function(r, title, name_legend, option_col = "A"){
     coord_equal()+
     ggtitle(paste0(title) ) +
     theme_bw() +
-    theme(panel.grid.major = element_line(colour = "gray99"), 
-          panel.grid.minor = element_line(colour = "gray99"))
+    theme(panel.grid.major = element_line(colour = "gray90"), 
+          panel.grid.minor = element_line(colour = "gray90"))
   
   
   return(map_raster_df)

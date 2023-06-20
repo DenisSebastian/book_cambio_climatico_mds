@@ -80,10 +80,3 @@ ggsave(plot = map_p999, filename = "images/MIROC5_hist_p999.png",
 
 
 
-# get series --------------------------------------------------------------
-
-df_series <- nc_all %>% terra::as.data.frame()
-df_series_t <- as.data.frame(t(df_series))
-px_1 <- df_series_t[,1] %>% as.vector()
-result <- Duration_dry(px_1, threshold = 0.1)
-

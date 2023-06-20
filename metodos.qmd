@@ -9,7 +9,7 @@ fig-cap-location: "bottom"
 
 **Número de Perdiodos, Promedio de Duración y Coeficiente de Variabilidad de Dry Spell**
 
-::: {#fig-percentiles layout-ncol="3"}
+::: {#fig-estadisticasDrySpell layout-ncol="3"}
 
 ![Número de Perdiodos de Dry Spell](images/MIROC5_hist_N_periods.png){#fig-periMIROC5 width="300"}
 
@@ -17,7 +17,7 @@ fig-cap-location: "bottom"
 
 ![Coeficiente de Variabilidad](images/MIROC5_hist_c_var.png){#fig-cvMIROC5  width="300"}
 
-Número de Perdiodos, Promedio de Duración y Coeficiente de Variabilidad de Dry Spell
+Número de Perdiodos, Promedio de Duración y Coeficiente de Variabilidad de periodos de Dry Spell.
 :::
 
 
@@ -31,6 +31,24 @@ Número de Perdiodos, Promedio de Duración y Coeficiente de Variabilidad de Dry
 
 Representación espacial de los los percentiles de dry spell
 :::
+
+
+
+::: {#fig-estadDrySpell layout-ncol="3"}
+
+![Varianza de la Función de Densidad de Dry Spell](images/MIROC5_hist_var_dens.png){#fig-meanMIROC5varDens  width="300"}
+
+
+![Promedio de la Función de Densidad de Dry Spell](images/MIROC5_hist_mean_dens.png){#fig-periMIROC5meanDens width="300"}
+
+
+
+![Coeficiente de Variabilidad de la Función de Densidad de Dry Spell](images/MIROC5_hist_vc_dens.png){#fig-cvMIROC5vcDens  width="300"}
+
+Análisis de función de Densidad de duración de periodos de Dry Spell.
+:::
+
+
 
 ## Requerimiento:
 
