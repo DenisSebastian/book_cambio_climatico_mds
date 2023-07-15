@@ -11,112 +11,49 @@
     "href": "index.html#alumnos",
     "title": "Proyecto Final",
     "section": "Alumnos:",
-    "text": "Alumnos:\n\nDenis Berroeta\nJosé Cerda\nVicente"
+    "text": "Alumnos:\nDenis Berroeta1,2, José Miguel Cerda-Paredes2,3, Vicente Vega4\n1 Centro de Inteligencia Territorial, Universidad Adolfo Ibáñez, Av. Presidente Errázuriz 3485, Chile. 2. Programa de Doctorado en Data Science, Facultad de Ingeniería y Ciencias, Universidad Adolfo Ibáñez. Diagonal Las Torres 2640, Santiago, Chile. 3. Fundación Data Observatory. Eliodoro Yáñez 2990, Santiago, Chile. 4. Programa de Magister en Ciencias de la Ingeniería, Facultad de Ingeniería y Ciencias, Universidad Adolfo Ibáñez. Diagonal Las Torres 2640, Santiago, Chile.\nTODO:\n\nSolicitar las imagenes y referencias\nagregar iamgenes y referencias\nagregar referencias bibliogràficas\nagregar códigos a repositorio\nagregar material suplementario"
   },
   {
-    "objectID": "index.html#docentes",
-    "href": "index.html#docentes",
-    "title": "Proyecto Final",
-    "section": "Docentes",
-    "text": "Docentes\n\nProfesor: Cristian Martinez-Villalobos\nAyudante: Leandra Loyola"
-  },
-  {
-    "objectID": "index.html#componentes",
-    "href": "index.html#componentes",
-    "title": "Proyecto Final",
-    "section": "Componentes:",
-    "text": "Componentes:\n\nPresentación: 22 de junio del 2023\nInforme Final: 26 de junio del 2023"
-  },
-  {
-    "objectID": "index.html#repositorio-github",
-    "href": "index.html#repositorio-github",
-    "title": "Proyecto Final",
-    "section": "Repositorio Github",
-    "text": "Repositorio Github\nLos análisis y códigos se registraron en el siguiente repositorio Github:\nhttps://github.com/DenisSebastian/cambio_climatico"
-  },
-  {
-    "objectID": "abstract.html#requerimiento",
-    "href": "abstract.html#requerimiento",
+    "objectID": "abstract.html",
+    "href": "abstract.html",
     "title": "1  Abstract",
-    "section": "1.1 Requerimiento:",
-    "text": "1.1 Requerimiento:\nAbstract (máximo 160 palabras, no cuentan para el máximo de 4000): debe contener la definición e importancia del problema o pregunta de investigación, qué metodología se usó para responder la pregunta, los resultados más importantes y sus implicancias. Todo eso en un máximo de 160 palabras. Algunos ejemplos de abstracts escritos con menos de 160 palabras:"
+    "section": "",
+    "text": "Dry spells son periodos entre el fin de una lluvia y el comienzo de la siguiente y están relacionados con las sequías. La zona Mediterránea de Chile está sufriendo una mega sequía y es importante entender el comportamiento de los dry spells a futuro. El objetivo es determinar cómo cambia la probabilidad de ocurrencia de dry spells en la zona centro de Chile bajo escenarios de cambio climático. Se utilizó precipitaciones diarias de tres modelos (dominio SAM-44); escenario histórico (1951-2005) y RCPs (2006-1959) desde CORDEX. Se estimó cantidad de dry spells, duración promedio y coeficiente de variación y percentil 99 de la duración. Se observó diferencias en todos los parámetros. El sur de la zona presenta mayor cantidad de dry spells, pero de menor duración, debido a la frecuencia de lluvias en el sur. Se obtuvo duraciones más fluctuantes en el norte y eventos extremos más intensos en el futuro. El aumento en la duración puede tener consecuencias socioeconómicas negativas.\nKeywords Dry spells · Mediterráneo · Chile central · Precipitaciones · Eventos extremos"
   },
   {
-    "objectID": "intro.html#requerimiento",
-    "href": "intro.html#requerimiento",
+    "objectID": "intro.html",
+    "href": "intro.html",
     "title": "2  Introducción",
-    "section": "2.1 Requerimiento:",
-    "text": "2.1 Requerimiento:\n\nIntroduce la temática macro que va a ser abarcada por el reporte.\nDefine el problema a tratar.\nHace un review de la literatura (qué sabemos y que no sobre el problema).\nHabla muy brevemente de la metodología usada para abordar el problema.\nOrienta al lector sobre el resto de la publicación.\n\n\n\n\n\nOliver, Eric C. J., Markus G. Donat, Michael T. Burrows, Pippa J. Moore, Dan A. Smale, Lisa V. Alexander, Jessica A. Benthuysen, et al. 2018. “Longer and More Frequent Marine Heatwaves over the Past Century.” Nature Communications 9 (1). https://doi.org/10.1038/s41467-018-03732-9."
+    "section": "",
+    "text": "La zona Mediterránea de Chile se distribuye entre los 25° y 40°S, específicamente entre las regiones de Atacama y la Araucanía (Pliscoff & Luebert, 2022). En esta zona se han registrado precipitaciones promedio fluctuantes, entre 100 y 1000 mm, dependiendo de la latitud y altitud. De esta forma se producen 2 tipos de climas característicos de Chile central; un clima Mediterráneo y otro semiárido (CR2, 2021).\nEn la zona Mediterránea chilena no ocurren tormentas con alta frecuencia. La ocurrencia de fenómenos de precipitación extrema ocurre con una frecuencia promedio de una cada 10 años. Generalmente, de uno o dos días de duración, con cerca de un 90 % de la lluvia cayendo entre los meses de abril a septiembre (CR2, 2021). Las precipitaciones pueden verse afectadas por distintos factores, como las oscilaciones inter decadales, la oscilación decadal del Pacífico que aumenta la temperatura superficial del mar o bien las oscilaciones interanuales, como lo son el fenómeno de La Niña o El Niño, e incluso fenómenos intra estacionales (CR2, 2021). Entre los factores que tienen estrecha relación con la precipitación están las altas temperaturas por un tiempo prolongado que supera las duraciones normales, estas son llamadas olas de calor. Las olas de calor son fenómenos climáticos extremos en los sistemas atmosféricos y oceánicos que pueden tener efectos devastadores y a largo plazo en los ecosistemas, con las consiguientes consecuencias socioeconómicas (Oliver et al., 2018). El mantenimiento de olas de calor en un sistema puede llegar a generar fenómenos propios de sequía o inclusive en una forma más extrema, mega sequías.\nLas sequías y mega sequías son fenómenos que son influenciadas por múltiples factores; anomalías de la temperatura superficial del mar, las retroalimentaciones tierra-atmósfera, la variabilidad atmosférica interna y fuerzas externas (Lin et al., 2022). Los fenómenos de sequía o mega sequía son distinguibles por la disminución de recursos hídricos presentes enfuentes acuíferas y cuencas hidrográficas, donde disminuyen además los reservorios de agua en forma de aguanieve y asimismo de las precipitaciones por un tiempo prolongado (Garreaud, 2017). Las sequías no sólo se atribuyen a la disminución en la cantidad de precipitación, sino también al aumento en la duración de los períodos secos o dry spells. Estos son los periodos entre lluvias, es decir, desde que deja de llover hasta que comienza a llover nuevamente. La variabilidad en la cantidad de lluvia diaria puede manifestarse en períodos prolongados de condiciones húmedas o secas, lo cual resulta útil para comprender el impacto de la concentración de precipitaciones. Los índices más comúnmente utilizados para analizar las características de los períodos secos y húmedos incluyen el número de períodos, la duración promedio de estos y la duración máxima de los períodos (Ratan & Venugopal, 2013; Şen et al., 2020).\nSegún Wainwright et al. (2022) las proyecciones indican que los dry spells más largos aumentarían en frecuencia en Sudamérica. Al igual que López-Franca et al. (2015) que proponen un fuerte aumento en la probabilidad de ocurrencia de períodos secos largos y disminución de la probabilidad de ocurrencia de períodos secos cortos en regiones Mediterráneas. La prolongación de los dry spells alcanzarían aproximadamente 2 días más por década en Sudamérica y África meridional (Wainwright et al., 2022). Esto coincide con Polade et al. (2014) quienes estiman hasta 30 días secos más al año podrían experimentar Sudamérica y las regiones Mediterráneas, a finales de este siglo. Estas proyecciones muestran patrones cualitativamente coherentes con los futuros cambios previstos en el escenario del cambio climático. La prolongación de los periodos de sequía en Sudamérica está asociada al calentamiento relativo de las temperaturas de la superficie marina del Atlántico Norte y a la amplificación del calentamiento terrestre en comparación con los océanos adyacentes; se prevé que ambos fenómenos continúen con un mayor calentamiento, lo que sugiere la existencia de un impulsor común de las tendencias recientes y las proyecciones futuras (Polade et al., 2014; Wainwright et al. 2022).\nLos dry spells pueden implicar un peligro para el lugar en el que se desarrollan, no solo por la disminución de recursos hídricos, sino por posibles eventos extremos posteriores al periodo seco. Esto se explica ya que en dicho lugar comienza a evolucionar un proceso de acumulación de distribución de precipitación, es decir, lo que debiese haber llovido durante el periodo seco se acumula y precipita adicionalmente en otro momento, generando una precipitación intensa en un periodo acotado de tiempo (Martinez-villalobos & Neelin, 2017). Si bien, se han analizado fenómenos de sequía en presencia de dry spells, la crisis climática es una variable relevante en cuanto al análisis de fenómenos climatológicos, más aún en cuanto a zonas chilenas en situación de alta vulnerabilidad climática (IPCC, 2022). Por lo que establecer un análisis que permita proyectar eventos futuros implica evitar pérdidas de recursos naturales, principalmente hídricos, así como logísticos y económicos.\nEl objetivo de este trabajo es determinar cómo cambia la probabilidad de ocurrencia de dry spells en la zona centro de Chile bajo escenarios de cambio climático proyectado para las próximas décadas. Se busca entender cómo las tendencias actuales en la variabilidad climática en la zona Mediterránea pueden afectar la duración y frecuencia de los períodos de sequía. Para ello se utilizaron datos diarios de precipitación históricos, así como también proyecciones futuras en tres escenarios del cambio climático de tres modelos regionales. Se definió un umbral y se calculó la duración y frecuencia de dry spells en la zona Mediterránea de Chile.\nEste trabajo presenta una estructura por secciones; la sección Data explica la obtención de datos de cada modelo utilizado, luego la sección Métodos donde se profundiza en el procesamiento de los datos para determinar parámetros de los dry spells. Finalmente, dos secciones; Resultados y Conclusiones donde se presentarán los productos obtenidos y las conclusiones propuestas."
   },
   {
-    "objectID": "data.html#introducción",
-    "href": "data.html#introducción",
+    "objectID": "data.html",
+    "href": "data.html",
     "title": "3  Data",
-    "section": "3.1 Introducción",
-    "text": "3.1 Introducción\nLos datos de precipitación diaria producidos a través de modelos regionales, los que fueron obtenidos desde la página web del Coordinated Regional Climate Downscaling Experiment. Para ello, se realizó previamente una inspección de la disponibilidad de diferentes modelos de dominio sudamericano (desde 19°N a 52°S y desde 105°O 17°O). El dominio sudamericano contempla 3 resoluciones espaciales horizontales; SAM-20 (0.20°x0.20°), SAM-22 (0.22°x0.22°) y SAM-44 (0.44°x0.44°).\nDebido a que el objetivo de este trabajo se enmarca en observar las tendencias de los dry-spells en los tres escenarios del cambio climático, se determinó trabajar con el dominio SAM-44, que es el único que considera los tres escenarios.\nPara cumplir con los requisitos de frecuencia diaria de precipitación, el dominio SAM-44 y los tres escenarios RCP se encontraron 5 Driving Models; MIROC-MIROC5, ICHEC-EC-EARTH, MOHC-HadGEM2-ES (v3), MPI-M-MPI-ESM-LR (v1 y v3) y NCC-NorESM1-M."
+    "section": "",
+    "text": "Los datos de precipitación diaria (Kg m-2 s-1) son productos de modelos regionales. Para este trabajo se obtuvieron desde la página web del Coordinated Regional Climate Downscaling Experiment. Para ello, se realizó previamente una inspección de la disponibilidad de diferentes modelos de dominio sudamericano (desde 19°N a 52°S y desde 105° a 17°O). El dominio sudamericano contempla tres resoluciones espaciales horizontales; SAM-20 (0.20°x0.20°), SAM-22 (0.22°x0.22°) y SAM- 44 (0.44°x0.44°). Debido a que el objetivo de este trabajo se enmarca en observar las tendencias de los dry spells en los tres escenarios del cambio climático, se determinó trabajar con el dominio SAM-44, el único que considera los tres escenarios. Se utilizaron tres Driving Models de precipitación diaria del dominio SAM-44 y los tres escenarios RCP (2.6, 4.5 y 8.5); MIROC-MIROC5, ICHEC- EC-EARTH y MOHC-HadGEM2-ES."
   },
   {
-    "objectID": "data.html#región-de-interés",
-    "href": "data.html#región-de-interés",
-    "title": "3  Data",
-    "section": "3.2 Región de Interés",
-    "text": "3.2 Región de Interés\nSe realizó un filtro espacial para establecer una región de interés (ROI) que abarca la de región de Coquimbo a la región de los Lagos\n\n\n\n\n\n\n\n(a) Región Total\n\n\n\n\n\n\n\n(b) Región de Interés\n\n\n\n\nFigure 3.1: Territorio total que representan las precipitaciones y región de interés."
-  },
-  {
-    "objectID": "data.html#miroc-miroc5-historical",
-    "href": "data.html#miroc-miroc5-historical",
-    "title": "3  Data",
-    "section": "3.3 MIROC-MIROC5 Historical",
-    "text": "3.3 MIROC-MIROC5 Historical\n\n3.3.1 Promedio de Precipitaciones Diarias\nPromedio de Precipitaciones diarias de MIROC5 Historical (1951-01-01 - 2005-12-31)\n\n\n\n\n\n\n\n\n3.3.2 Promedio de Precipitaciones agrupadas por mes\nPromedio de Precipitaciones diarias de MIROC5 Historical (1951-01 - 2005-12)"
-  },
-  {
-    "objectID": "data.html#requerimiento",
-    "href": "data.html#requerimiento",
-    "title": "3  Data",
-    "section": "3.4 Requerimiento:",
-    "text": "3.4 Requerimiento:\nData: Presenta la fuente de datos a ser usados en el estudio y sus principales características. Guiarse por cómo esto es presentado tipícamente en publicaciones."
-  },
-  {
-    "objectID": "metodos.html#instroducción",
-    "href": "metodos.html#instroducción",
+    "objectID": "metodos.html",
+    "href": "metodos.html",
     "title": "4  Métodos",
-    "section": "4.1 Instroducción",
-    "text": "4.1 Instroducción"
+    "section": "",
+    "text": "Luego de la obtención de la data, esta fue compilada a partir de la variable temporal, ya que cada archivo con extensión NC (.nc) agrupaba de a cinco años de precipitaciones. El escenario histórico registra entre 1951 y 2005 (54 años). A su vez, los escenarios RCP registran hasta 2099 (varía en días dependiendo del modelo y el escenario). Por lo tanto, se utilizó una máscara temporal de 54 años en escenarios, para estandarizar los parámetros de dry spell y que fuesen comparables, quedando desde 2006 hasta 2060. Los archivos compilados fueron transformados en rasters para reducir el tamaño del archivo y cortados con una máscara espacial en la zona de interés (desde 25.5°S a 39.5°S y desde 76.5°O a 68.5°O). Posteriormente, por medio de un factor de 86400, se transformó las unidades de medidas de precipitación de Kg m-2 s-1 a mm día-1 (1 Kg m-2 s-1 : 86400 mm día-1).\nSe elaboró la función Duration_dry_all() para determinar cuándo comienza y termina un dry spell, su duración y cuantificar los eventos. Además, esta función estima el promedio y el coeficiente de variación de la duración de los dry spells. Para facilitar su uso, a partir de dicha función se crearon sub-funciones que permiten trabajar independientemente los estimadores mencionados. Esta metodología de trabajo permite personalizar los resultados deseados (i.e. se creó una función duration_dry_percentil(), la que nos permite obtener los percentiles que requiramos con un argumento “percentail =”).\nSe utilizó un umbral de 1 mm día-1 para diferenciar días secos y lluviosos, ya que en climas Mediterráneos las precipitaciones mayores a este umbral no suelen ser absorbidas por los suelos en condiciones de alta evapotranspiración (Douguedroit, 1987). Cada parámetro de dry spell se estimó para cada uno de los tres modelos y en cada uno de los cuatro escenarios. Un producto con la media de cada parámetro en cada escenario fue obtenido promediando los tres modelos. Toda la ingeniería de datos, sus posteriores análisis y elaboración de figuras fueron realizadas por medio de RStudio (RStudio Team, 2020)."
   },
   {
-    "objectID": "metodos.html#miroc-miroc5-historical",
-    "href": "metodos.html#miroc-miroc5-historical",
-    "title": "4  Métodos",
-    "section": "4.2 MIROC-MIROC5 Historical",
-    "text": "4.2 MIROC-MIROC5 Historical\nNúmero de Perdiodos, Promedio de Duración y Coeficiente de Variabilidad de Dry Spell\n\n\n\n\n\n\n\n(a) Número de Perdiodos de Dry Spell\n\n\n\n\n\n\n\n(b) Promedio de Duración de Dry Spel\n\n\n\n\n\n\n\n(c) Coeficiente de Variabilidad\n\n\n\n\nFigure 4.1: Número de Perdiodos, Promedio de Duración y Coeficiente de Variabilidad de periodos de Dry Spell.\n\n\nPercentiles de Dry Spell\n\n\n\n\n\n\n\n(a) Percentil 99\n\n\n\n\n\n\n\n(b) Percentil 99.9\n\n\n\n\nFigure 4.2: Representación espacial de los los percentiles de dry spell\n\n\nAnálisis de la función de Densidad\nA continaución se observa graficamente (Figure 4.3) la función de desidad de la duración de un pixel en este caso el número 100, donde ademas se le calcula el promedio.\n\n\n\nFigure 4.3: Función de Densidad de duración de Dry Espell sobre el pixel 100\n\n\nPosteriormente a cada dunción de densidad se le calculo diversas medidas estadísticas, cuyo resultads se pueden interpretar espacialmente a través de las siguientes figuras Figure 4.4.\n\n\n\n\n\n\n\n(a) Varianza de la Función de Densidad de Dry Spell\n\n\n\n\n\n\n\n(b) Promedio de la Función de Densidad de Dry Spell\n\n\n\n\n\n\n\n(c) Coeficiente de Variabilidad de la Función de Densidad de Dry Spell\n\n\n\n\nFigure 4.4: Análisis de función de Densidad de duración de periodos de Dry Spell."
-  },
-  {
-    "objectID": "metodos.html#requerimiento",
-    "href": "metodos.html#requerimiento",
-    "title": "4  Métodos",
-    "section": "4.3 Requerimiento:",
-    "text": "4.3 Requerimiento:\nMétodos: Aquí se presenta el diseño metodológico del estudio. Este diseño es usado para responder la pregunta que definen en la introducción (e.g., ¿Cómo cambiará la variabilidad de El Niñoo de aquí a fin de siglo?). Cualquier salvedad (caveat) sobre la metodología tiene que ser descrita acá también."
-  },
-  {
-    "objectID": "resultados.html#requerimiento",
-    "href": "resultados.html#requerimiento",
+    "objectID": "resultados.html",
+    "href": "resultados.html",
     "title": "5  Resultados",
-    "section": "5.1 Requerimiento:",
-    "text": "5.1 Requerimiento:\nResultados: Esta sección contiene los resultados de los experimentos descrito en el diseño metodológico. Tienen que ayudar a responder la pregunta que se hicieron en la introducción."
+    "section": "",
+    "text": "El promedio (de los tres modelos) del número acumulado de drys spells en los cuatro escenarios; histórico y en cambio climático (RCP 2.6, 4.5 y 8.5), plantean diferencias entre el extremo norte y sur de la zona Mediterránea de Chile (Figura 1). Esto se debe a la frecuencia de lluvias en el sur del país, por lo tanto, habría mayor número de dry spells de corta duración (mayor frecuencia). Así se observa en la Figura 2, donde una mayor duración promedio de los dry spells se concentra en el extremo norte del área de estudio, e incluso en la zona centro-sur no se alcanzan dry spells con duración promedio superior a 30 días. La zona cordillerana Andina también presenta mayor número de dry spells y más breves que el área costera del Mediterráneo chileno (Figura 1 y 2).\nEntre escenarios, no se observan grandes diferencias en el número de dry spells (Figura 1). Sin embargo, si comparamos la duración promedio, la región de Atacama sería la más afectada frente al cambio climático. Con dry spells mucho más duraderos en el RCP 2.6 y RCP 8.5. El registro histórico muestra que en promedio los dry spells durarían ~120 días, mientras que frente a escenarios de cambio climático superarían los ~150 días.\nSi bien el norte de la zona Mediterránea presenta una mayor duración promedio de los dry spells, esta también tiene un mayor coeficiente de variación (CV), lo que se traduce en duraciones más fluctuantes. Mientras que la región sur del Mediterráneo chileno presentaría menores coeficientes de variación, es decir, duraciones más constantes (Figura 3). Esto asociado a la mayor frecuencia de lluvias. En cuanto a los escenarios, frente al cambio climático se observaría mayor CV de las duraciones respecto al histórico. Sin embargo, se repite el patrón anterior, donde el RCP 4.5 presentaría inclusos CV levemente menores que en el RCP 2.6 (Figura 3). Además, en la costa y mar adentro habría mayor CV, posiblemente asociado fenómenos climáticos y atmosféricos oceánicos.\nEl percentil 99 de la duración promedio de los dry spells muestra que los eventos más extremos alcanzarían hasta ~900 días sin lluvias en las costas de las regiones de Coquimbo y Atacama en un escenario extremo cambio climático (RCP 8.5; Figura 4). Mientras que el registro histórico, el 1% de los eventos más extremos duraría entre 400 a 600 días (Figura 4).\nFIguras 1Y 2.\nCabe destacar que para el objetivo de este trabajo se compararon los parámetros de dry spells del registro histórico y los escenarios de cambio climático a través del promedio de tres modelos. Sin embargo, se pueden observar diferencias claras entre los modelos a nivel intra-escenario. Aparentemente el modelo ICHEC-EC-EARTH presentaría dry spells muchos más intensos en duración y mucho más variables, seguido por MIROC-MIROC5 y último MOHC-HadGEM2-ES siendo el modelo que presentaría dry spells mucho más leves en duración y más constantes (Figura S1, S2 y S3). En cuanto a eventos extremos (Percentil 99) MIROC-MIROC5 presenta dry spells que excederían los ~900 días secos en todos los escenarios. Mientras que, a partir de MOHC-HadGEM2-ES los eventos extremos no superarían 600 días, incluso en el RCP 8.5 (Figura S4).\nfiguraS 3 Y 4"
   },
   {
     "objectID": "conclusion.html",
     "href": "conclusion.html",
     "title": "6  Conclusión",
     "section": "",
-    "text": "f. Conclusión: Esta sección debe discutir cómo los resultados nos ayudan a responder la pregunta de investigación (que se hicieron en la introducción). También debe discutir las implicancias de los resultados (sociales, económicas, para el campo de investigación, etc)."
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Oliver, Eric C. J., Markus G. Donat, Michael T. Burrows, Pippa J. Moore,\nDan A. Smale, Lisa V. Alexander, Jessica A. Benthuysen, et al. 2018.\n“Longer and More Frequent Marine Heatwaves over the Past\nCentury.” Nature Communications 9 (1). https://doi.org/10.1038/s41467-018-03732-9."
+    "text": "A partir de los resultados obtenidos en este estudio la frecuencia de dry spells en la región Mediterránea de Chile no se vería afectada por efecto del cambio climático, inclusive en sus escenarios más dramáticos. Sin embargo, lo que si se verá afectado por el cambio climático es la duración que estos eventos. Tanto en la duración promedio que tendrá hasta 2059 como la variación de ellos. V olviéndose más fluctuantes en la zona centro norte de Chile y más constantes en el centro sur. Los eventos extremos serían altamente duraderos e incluso en el escenario más optimista del cambio climático se extenderían las duraciones considerablemente respecto al escenario histórico."
   },
   {
     "objectID": "explo.html#selección-de-modelo",

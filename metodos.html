@@ -195,15 +195,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#instroducción" id="toc-instroducción" class="nav-link active" data-scroll-target="#instroducción"><span class="header-section-number">4.1</span> Instroducción</a></li>
-  <li><a href="#miroc-miroc5-historical" id="toc-miroc-miroc5-historical" class="nav-link" data-scroll-target="#miroc-miroc5-historical"><span class="header-section-number">4.2</span> MIROC-MIROC5 Historical</a></li>
-  <li><a href="#requerimiento" id="toc-requerimiento" class="nav-link" data-scroll-target="#requerimiento"><span class="header-section-number">4.3</span> Requerimiento:</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -225,114 +217,11 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="instroducción" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="instroducción"><span class="header-section-number">4.1</span> Instroducción</h2>
-</section>
-<section id="miroc-miroc5-historical" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="miroc-miroc5-historical"><span class="header-section-number">4.2</span> MIROC-MIROC5 Historical</h2>
-<p><strong>Número de Perdiodos, Promedio de Duración y Coeficiente de Variabilidad de Dry Spell</strong></p>
-<div id="fig-estadisticasDrySpell" class="quarto-layout-panel">
-<figure class="figure">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 33.3%;justify-content: center;">
-<div id="fig-periMIROC5" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/MIROC5_hist_N_periods.png" class="img-fluid figure-img" data-ref-parent="fig-estadisticasDrySpell" width="300"></p>
-<figcaption class="figure-caption">(a) Número de Perdiodos de Dry Spell</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 33.3%;justify-content: center;">
-<div id="fig-meanMIROC5" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/MIROC5_hist_prom_dur.png" class="img-fluid figure-img" data-ref-parent="fig-estadisticasDrySpell" width="300"></p>
-<figcaption class="figure-caption">(b) Promedio de Duración de Dry Spel</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 33.3%;justify-content: center;">
-<div id="fig-cvMIROC5" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/MIROC5_hist_c_var.png" class="img-fluid figure-img" data-ref-parent="fig-estadisticasDrySpell" width="300"></p>
-<figcaption class="figure-caption">(c) Coeficiente de Variabilidad</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;4.1: Número de Perdiodos, Promedio de Duración y Coeficiente de Variabilidad de periodos de Dry Spell.</figcaption><p></p>
-</figure>
-</div>
-<p><strong>Percentiles de Dry Spell</strong></p>
-<div id="fig-percentiles" class="quarto-layout-panel">
-<figure class="figure">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-p99MIROC5" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/MIROC5_hist_p99.png" class="img-fluid figure-img" data-ref-parent="fig-percentiles"></p>
-<figcaption class="figure-caption">(a) Percentil 99</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-p999MIROC5" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/MIROC5_hist_p999.png" class="img-fluid figure-img" data-ref-parent="fig-percentiles"></p>
-<figcaption class="figure-caption">(b) Percentil 99.9</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;4.2: Representación espacial de los los percentiles de dry spell</figcaption><p></p>
-</figure>
-</div>
-<p><strong>Análisis de la función de Densidad</strong></p>
-<p>A continaución se observa graficamente (<a href="#fig-fdens">Figure&nbsp;<span>4.3</span></a>) la función de desidad de la duración de un pixel en este caso el número 100, donde ademas se le calcula el promedio.</p>
-<div id="fig-fdens" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/fun_densidad_p100.png" class="img-fluid figure-img" width="600"></p>
-<figcaption class="figure-caption">Figure&nbsp;4.3: Función de Densidad de duración de Dry Espell sobre el pixel 100</figcaption>
-</figure>
-</div>
-<p>Posteriormente a cada dunción de densidad se le calculo diversas medidas estadísticas, cuyo resultads se pueden interpretar espacialmente a través de las siguientes figuras <a href="#fig-estadDrySpell">Figure&nbsp;<span>4.4</span></a>.</p>
-<div id="fig-estadDrySpell" class="quarto-layout-panel">
-<figure class="figure">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 33.3%;justify-content: center;">
-<div id="fig-meanMIROC5varDens" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/MIROC5_hist_var_dens.png" class="img-fluid figure-img" data-ref-parent="fig-estadDrySpell" width="300"></p>
-<figcaption class="figure-caption">(a) Varianza de la Función de Densidad de Dry Spell</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 33.3%;justify-content: center;">
-<div id="fig-periMIROC5meanDens" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/MIROC5_hist_mean_dens.png" class="img-fluid figure-img" data-ref-parent="fig-estadDrySpell" width="300"></p>
-<figcaption class="figure-caption">(b) Promedio de la Función de Densidad de Dry Spell</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 33.3%;justify-content: center;">
-<div id="fig-cvMIROC5vcDens" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/MIROC5_hist_vc_dens.png" class="img-fluid figure-img" data-ref-parent="fig-estadDrySpell" width="300"></p>
-<figcaption class="figure-caption">(c) Coeficiente de Variabilidad de la Función de Densidad de Dry Spell</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;4.4: Análisis de función de Densidad de duración de periodos de Dry Spell.</figcaption><p></p>
-</figure>
-</div>
-</section>
-<section id="requerimiento" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="requerimiento"><span class="header-section-number">4.3</span> Requerimiento:</h2>
-<p><strong>Métodos:</strong> Aquí se presenta el diseño metodológico del estudio. Este diseño es usado para responder la pregunta que definen en la introducción (e.g., ¿Cómo cambiará la variabilidad de El Niñoo de aquí a fin de siglo?). Cualquier salvedad (caveat) sobre la metodología tiene que ser descrita acá también.</p>
+<p>Luego de la obtención de la data, esta fue compilada a partir de la variable temporal, ya que cada archivo con extensión NC (.nc) agrupaba de a cinco años de precipitaciones. El escenario histórico registra entre 1951 y 2005 (54 años). A su vez, los escenarios RCP registran hasta 2099 (varía en días dependiendo del modelo y el escenario). Por lo tanto, se utilizó una máscara temporal de 54 años en escenarios, para estandarizar los parámetros de dry spell y que fuesen comparables, quedando desde 2006 hasta 2060. Los archivos compilados fueron transformados en rasters para reducir el tamaño del archivo y cortados con una máscara espacial en la zona de interés (desde 25.5°S a 39.5°S y desde 76.5°O a 68.5°O). Posteriormente, por medio de un factor de 86400, se transformó las unidades de medidas de precipitación de Kg m-2 s-1 a mm día-1 (1 Kg m-2 s-1 : 86400 mm día-1).</p>
+<p>Se elaboró la función Duration_dry_all() para determinar cuándo comienza y termina un dry spell, su duración y cuantificar los eventos. Además, esta función estima el promedio y el coeficiente de variación de la duración de los dry spells. Para facilitar su uso, a partir de dicha función se crearon sub-funciones que permiten trabajar independientemente los estimadores mencionados. Esta metodología de trabajo permite personalizar los resultados deseados (i.e.&nbsp;se creó una función duration_dry_percentil(), la que nos permite obtener los percentiles que requiramos con un argumento “percentail =”).</p>
+<p>Se utilizó un umbral de 1 mm día-1 para diferenciar días secos y lluviosos, ya que en climas Mediterráneos las precipitaciones mayores a este umbral no suelen ser absorbidas por los suelos en condiciones de alta evapotranspiración (Douguedroit, 1987). Cada parámetro de dry spell se estimó para cada uno de los tres modelos y en cada uno de los cuatro escenarios. Un producto con la media de cada parámetro en cada escenario fue obtenido promediando los tres modelos. Toda la ingeniería de datos, sus posteriores análisis y elaboración de figuras fueron realizadas por medio de RStudio (RStudio Team, 2020).</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
