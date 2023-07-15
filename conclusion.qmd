@@ -2,6 +2,4 @@
 title: "Conclusión"
 ---
 
-**f. Conclusión:** Esta sección debe discutir cómo los resultados nos ayudan a responder la
-pregunta de investigación (que se hicieron en la introducción). También debe discutir las
-implicancias de los resultados (sociales, económicas, para el campo de investigación, etc).
+A partir de los resultados obtenidos en este estudio la frecuencia de dry spells en la región Mediterránea de Chile no se vería afectada por efecto del cambio climático, inclusive en sus escenarios más dramáticos. Sin embargo, lo que si se verá afectado por el cambio climático es la duración que estos eventos. Tanto en la duración promedio que tendrá hasta 2059 como la variación de ellos. V olviéndose más fluctuantes en la zona centro norte de Chile y más constantes en el centro sur. Los eventos extremos serían altamente duraderos e incluso en el escenario más optimista del cambio climático se extenderían las duraciones considerablemente respecto al escenario histórico.

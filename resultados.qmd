@@ -2,7 +2,22 @@
 title: "Resultados"
 ---
 
-## Requerimiento:
 
 
-**Resultados:** Esta sección contiene los resultados de los experimentos descrito en el diseño metodológico. Tienen que ayudar a responder la pregunta que se hicieron en la introducción.
+El promedio (de los tres modelos) del número acumulado de drys spells en los cuatro escenarios; histórico y en cambio climático (RCP 2.6, 4.5 y 8.5), plantean diferencias entre el extremo norte y sur de la zona Mediterránea de Chile (Figura 1). Esto se debe a la frecuencia de lluvias en el sur del país, por lo tanto, habría mayor número de dry spells de corta duración (mayor frecuencia). Así se observa en la Figura 2, donde una mayor duración promedio de los dry spells se concentra en el extremo norte del área de estudio, e incluso en la zona centro-sur no se alcanzan dry spells con duración promedio superior a 30 días. La zona cordillerana Andina también presenta mayor número de dry spells y más breves que el área costera del Mediterráneo chileno (Figura 1 y 2).
+
+Entre escenarios, no se observan grandes diferencias en el número de dry spells (Figura 1). Sin embargo, si comparamos la duración promedio, la región de Atacama sería la más afectada frente al cambio climático. Con dry spells mucho más duraderos en el RCP 2.6 y RCP 8.5. El registro histórico muestra que en promedio los dry spells durarían ~120 días, mientras que frente a escenarios de cambio climático superarían los ~150 días.
+
+Si bien el norte de la zona Mediterránea presenta una mayor duración promedio de los dry spells, esta también tiene un mayor coeficiente de variación (CV), lo que se traduce en duraciones más fluctuantes. Mientras que la región sur del Mediterráneo chileno presentaría menores coeficientes de variación, es decir, duraciones más constantes (Figura 3). Esto asociado a la mayor frecuencia de lluvias. En cuanto a los escenarios, frente al cambio climático se observaría mayor CV de las duraciones respecto al histórico. Sin embargo, se repite el patrón anterior, donde el RCP 4.5 presentaría inclusos CV levemente menores que en el RCP 2.6 (Figura 3). Además, en la costa y mar adentro habría mayor CV, posiblemente asociado fenómenos climáticos y atmosféricos oceánicos.
+
+
+El percentil 99 de la duración promedio de los dry spells muestra que los eventos más extremos alcanzarían hasta ~900 días sin lluvias en las costas de las regiones de Coquimbo y Atacama en un escenario extremo cambio climático (RCP 8.5; Figura 4). Mientras que el registro histórico, el 1% de los eventos más extremos duraría entre 400 a 600 días (Figura 4).
+
+
+FIguras 1Y 2.
+
+Cabe destacar que para el objetivo de este trabajo se compararon los parámetros de dry spells del registro histórico y los escenarios de cambio climático a través del promedio de tres modelos. Sin embargo, se pueden observar diferencias claras entre los modelos a nivel intra-escenario. Aparentemente el modelo ICHEC-EC-EARTH presentaría dry spells muchos más intensos en duración y mucho más variables, seguido por MIROC-MIROC5 y último MOHC-HadGEM2-ES siendo el modelo que presentaría dry spells mucho más leves en duración y más constantes (Figura S1, S2 y S3). En cuanto a eventos extremos (Percentil 99) MIROC-MIROC5 presenta dry spells que excederían los ~900 días secos en todos los escenarios. Mientras que, a partir de MOHC-HadGEM2-ES los eventos extremos no superarían 600 días, incluso en el RCP 8.5 (Figura S4).
+
+
+figuraS 3 Y 4
+

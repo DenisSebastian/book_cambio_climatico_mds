@@ -3,60 +3,12 @@ title: "Métodos"
 fig-cap-location: "bottom"
 ---
 
-## Instroducción
 
-## MIROC-MIROC5 Historical
-
-**Número de Perdiodos, Promedio de Duración y Coeficiente de Variabilidad de Dry Spell**
-
-::: {#fig-estadisticasDrySpell layout-ncol="3"}
-
-![Número de Perdiodos de Dry Spell](images/MIROC5_hist_N_periods.png){#fig-periMIROC5 width="300"}
-
-![Promedio de Duración de Dry Spel](images/MIROC5_hist_prom_dur.png){#fig-meanMIROC5  width="300"}
-
-![Coeficiente de Variabilidad](images/MIROC5_hist_c_var.png){#fig-cvMIROC5  width="300"}
-
-Número de Perdiodos, Promedio de Duración y Coeficiente de Variabilidad de periodos de Dry Spell.
-:::
+Luego de la obtención de la data, esta fue compilada a partir de la variable temporal, ya que cada archivo con extensión NC (.nc) agrupaba de a cinco años de precipitaciones. El escenario histórico registra entre 1951 y 2005 (54 años). A su vez, los escenarios RCP registran hasta 2099 (varía en días dependiendo del modelo y el escenario). Por lo tanto, se utilizó una máscara temporal de 54 años en escenarios, para estandarizar los parámetros de dry spell y que fuesen comparables, quedando desde 2006 hasta 2060. Los archivos compilados fueron transformados en rasters para reducir el tamaño del archivo y cortados con una máscara espacial en la zona de interés (desde 25.5°S a 39.5°S y desde 76.5°O a 68.5°O). Posteriormente, por medio de un factor de 86400, se transformó las unidades de medidas de precipitación de Kg m-2 s-1 a mm día-1 (1 Kg m-2 s-1 : 86400 mm día-1).
 
 
-
-**Percentiles de Dry Spell**
-
-::: {#fig-percentiles layout-ncol="2" }
-![Percentil 99](images/MIROC5_hist_p99.png){#fig-p99MIROC5}
-
-![Percentil 99.9](images/MIROC5_hist_p999.png){#fig-p999MIROC5}
-
-Representación espacial de los los percentiles de dry spell
-:::
+Se elaboró la función Duration_dry_all() para determinar cuándo comienza y termina un dry spell, su duración y cuantificar los eventos. Además, esta función estima el promedio y el coeficiente de variación de la duración de los dry spells. Para facilitar su uso, a partir de dicha función se crearon sub-funciones que permiten trabajar independientemente los estimadores mencionados. Esta metodología de trabajo permite personalizar los resultados deseados (i.e. se creó una función duration_dry_percentil(), la que nos permite obtener los percentiles que requiramos con un argumento “percentail =”).
 
 
-**Análisis de la función de Densidad**
-
-A continaución se observa  graficamente (@fig-fdens) la función de desidad de la duración de un pixel en este caso el número 100, donde ademas se le calcula el promedio.
-
-![Función de Densidad de duración de Dry Espell sobre el pixel 100](images/fun_densidad_p100.png){#fig-fdens  fig-aling="center" width="600"}
-
-Posteriormente a cada dunción de densidad se le calculo diversas medidas estadísticas, cuyo resultads se pueden interpretar espacialmente a través de las siguientes figuras @fig-estadDrySpell.
-
-::: {#fig-estadDrySpell layout-ncol="3"}
-
-![Varianza de la Función de Densidad de Dry Spell](images/MIROC5_hist_var_dens.png){#fig-meanMIROC5varDens  width="300"}
-
-
-![Promedio de la Función de Densidad de Dry Spell](images/MIROC5_hist_mean_dens.png){#fig-periMIROC5meanDens width="300"}
-
-
-
-![Coeficiente de Variabilidad de la Función de Densidad de Dry Spell](images/MIROC5_hist_vc_dens.png){#fig-cvMIROC5vcDens  width="300"}
-
-Análisis de función de Densidad de duración de periodos de Dry Spell.
-:::
-
-
-
-## Requerimiento:
-
-**Métodos:** Aquí se presenta el diseño metodológico del estudio. Este diseño es usado para responder la pregunta que definen en la introducción (e.g., ¿Cómo cambiará la variabilidad de El Niñoo de aquí a fin de siglo?). Cualquier salvedad (caveat) sobre la metodología tiene que ser descrita acá también.
+Se utilizó un umbral de 1 mm día-1 para diferenciar días secos y lluviosos, ya que en climas Mediterráneos las precipitaciones mayores a este umbral no suelen ser absorbidas por los suelos en condiciones de alta evapotranspiración (Douguedroit, 1987). Cada parámetro de dry spell se estimó para cada uno de los tres modelos y en cada uno de los cuatro escenarios. Un producto con la media de cada parámetro en cada escenario fue obtenido promediando los tres modelos.
+Toda la ingeniería de datos, sus posteriores análisis y elaboración de figuras fueron realizadas por medio de RStudio (RStudio Team, 2020).

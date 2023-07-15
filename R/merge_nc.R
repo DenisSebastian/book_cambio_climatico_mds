@@ -29,8 +29,9 @@ plot(r_pr_base1[[1]])
 
 plot(r_pr_base1[[1]])
 ext <- ext(c(162,  172 ,  -30,   -15 ))
-# ext <- ext(c(162,  172 , -38,   -29 ))
+ext2 <- ext(c(162,  172 , -38,   -29 ))
 plot(ext, add = T)
+plot(ext2, add = T)
 
 r_pr <- crop(x = r_pr_base1, y = ext, snap="out")
 plot(r_pr[[2]])

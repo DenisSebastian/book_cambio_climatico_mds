@@ -48,7 +48,7 @@ Duration_Dry_Spell_wave <- function(T, threshold =1) {
 
 # function 2 --------------------------------------------------------------
 
-Duration_dry_all <- function(prec, threshold = 0.1) {
+Duration_dry_all <- function(prec, threshold = 1) {
   I_wet <- which(prec > threshold)
   I_dry <- which(prec <= threshold)
   
@@ -89,47 +89,54 @@ Duration_dry_all <- function(prec, threshold = 0.1) {
     ti <- as.integer(ti)
     tf <- as.integer(tf)
     
-    mean_dur <- mean(duration)
-    tL <- var(duration) / mean(duration)
-    t99 <- quantile(duration, 0.99)
-    t999 <- quantile(duration, 0.999)
+    mean_dur <- mean(duration, na.rm = T)
+    tL <- var(duration, na.rm = T) / mean(duration, na.rm = T)
   }
   # return(t999)
   
-  return(list(duration = duration, ti = ti, tf = tf, n = n, mean_dur = mean_dur, tL = tL, t99 = t99, t999 = t999))
+  return(list(duration = duration, ti = ti, tf = tf, n = n, mean_dur = mean_dur, tL = tL))
 }
 
-duration_dry <- function(prec, threshold = 0.1, percentail =0.99){
+duration_dry <- function(prec, threshold = 0.1){
   results <- Duration_dry_all(prec = prec, threshold = threshold)
   duration <-  results$duration
+  if(any(is.na(duration)) & length(duration)==1 ){
+    duration <- c(0,0) 
+  }
+  
   return(duration)
 }
 
-duration_dry_percentail <- function(prec, threshold = 0.1, percentail =0.99){
+duration_dry_percentail <- function(prec, threshold = 1, percentail =0.99){
   results <- Duration_dry_all(prec = prec, threshold = threshold)
   duration <-  results$duration
-  percentail <-  quantile(duration, percentail)
+  percentail <-  quantile(duration, percentail, na.rm = TRUE)
   return(percentail)
 }
 
 
-duration_dry_n <- function(prec, threshold = 0.1) {
+duration_dry_n <- function(prec, threshold = 1, na_zero = T) {
   results <- Duration_dry_all(prec = prec, threshold = threshold)
   n_dry = results$n
+  if(na_zero == T){
+    n_dry[is.na(n_dry)] <- 0    
+  }
   return(n_dry)
 }
 
-duration_dry_mean <- function(prec, threshold = 0.1) {
+duration_dry_mean <- function(prec, threshold = 1) {
   results <- Duration_dry_all(prec = prec, threshold = threshold)
   mean_dry = results$mean_dur
   return(mean_dry)
 }
 
-duration_dry_cv <- function(prec, threshold = 0.1) {
+duration_dry_cv <- function(prec, threshold = 1) {
     results <- Duration_dry_all(prec = prec, threshold = threshold)
     tl_dry = results$tL
     return(tl_dry)
 }
+
+na_zero <- function(x) ifelse(is.na(x),0, x )
 
 # mapas de modelos de los 5 mediana
 # distribucaiones de probabilidad conbinar

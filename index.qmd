@@ -4,23 +4,17 @@ El presente libro digital tiene como objetivo documentar y explicar de forma det
 
 
 ## Alumnos:
-- Denis Berroeta
-- José Cerda
-- Vicente
+Denis Berroeta1,2, José Miguel Cerda-Paredes2,3, Vicente Vega4
 
-## Docentes
+1 Centro de Inteligencia Territorial, Universidad Adolfo Ibáñez, Av. Presidente Errázuriz 3485, Chile. 
+2. Programa de Doctorado en Data Science, Facultad de Ingeniería y Ciencias, Universidad Adolfo Ibáñez. Diagonal Las Torres 2640, Santiago, Chile.
+3. Fundación Data Observatory. Eliodoro Yáñez 2990, Santiago, Chile.
+4. Programa de Magister en Ciencias de la Ingeniería, Facultad de Ingeniería y Ciencias, Universidad Adolfo Ibáñez. Diagonal Las Torres 2640, Santiago, Chile.
 
-- Profesor: Cristian Martinez-Villalobos
-- Ayudante: Leandra Loyola
+TODO:
 
-
-## Componentes:
-
-- Presentación: 22 de junio del 2023
-- Informe Final: 26 de junio del 2023
-
-
-## Repositorio Github
-
-Los análisis y códigos se registraron  en el siguiente repositorio Github:  
-<https://github.com/DenisSebastian/cambio_climatico>
+- Solicitar las imagenes y referencias
+- agregar iamgenes y referencias
+- agregar referencias bibliogràficas
+- agregar códigos a repositorio
+- agregar material suplementario
